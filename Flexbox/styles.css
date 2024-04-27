@@ -1,0 +1,163 @@
+body {
+    background-color: black;
+    width: 1100px;
+    margin: auto;
+    font-family: Inter, sans-serif;
+}
+
+header {
+    height: 280px;
+    background: #121212;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+
+
+
+main {
+    margin-top: 100px;
+}
+
+h1 {
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(#FFFFFF,#999999);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+
+h2 {
+    text-align: center;
+    color: #999999;
+}
+
+#cajas {
+    height: 1000px;
+    margin-top: 100px;
+}
+
+.caja {
+    background: #121212;
+    border-radius: 35px;
+    height: 400px;
+    margin-bottom: 10px;
+}
+
+#caja1 {
+    width: 70%;
+    float: left;
+}
+#caja1 h2 {
+    font-size: 40px;
+    text-align: center;
+    background: linear-gradient(to right, #FFFFFF 0%,#44D62C 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+#caja1 h3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: -20px;
+}
+.imagenes {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#caja2 {
+    width: 29%;
+    float: right;
+}
+#caja2 h2 {
+    font-size: 32px;
+    text-align: left;
+    background: linear-gradient( #FFFFFF 0%,#7E7E7E 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+    padding: 0px 40px;
+}
+.imagenes2 {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+}
+
+#caja3 {
+    width: 49.5%;
+    float: left;
+}
+#caja3 h2 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(to right, #3C619A,#00D400, #740409);
+    -webkit-background-clip: text;
+    color: transparent;  
+    padding: 0px 40px;
+}
+#caja3 h3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+.imagenes3 {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 55px;
+
+}
+
+
+#caja4 {
+    width: 49.5%;
+    float: right;
+}
+#caja4 h2 {
+    font-size: 32px;
+    text-align: center;
+    background: linear-gradient(to right, #3C619A 0%,#fff 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+    padding: 0px 40px;
+}
+#caja4 h3 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+#caja4 img {
+    margin-top: 55px;
+}
+
+footer {
+    background: #121212;
+    background-image: url(../img/Rectangle\ 5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+footer h2 {
+    -webkit-text-stroke: 1px #00D400;
+    color: transparent; 
+}
