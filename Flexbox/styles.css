@@ -49,8 +49,12 @@ h2 {
 }
 
 #cajas {
-    height: 1000px;
+    height: 850px;
     margin-top: 100px;
+}
+
+#cajas a{
+    text-decoration: none;
 }
 
 .caja {
@@ -58,6 +62,13 @@ h2 {
     border-radius: 35px;
     height: 400px;
     margin-bottom: 10px;
+    border: none;
+}
+.caja:hover {
+    transform: scale(1.05);
+    transition: 1.2s;
+    outline: 4px solid #00D400;
+    text-decoration: none;
 }
 
 #caja1 {
@@ -108,7 +119,7 @@ h2 {
 #caja3 h2 {
     font-size: 32px;
     text-align: center;
-    background: linear-gradient(to right, #3C619A,#00D400, #740409);
+    background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
     -webkit-background-clip: text;
     color: transparent;  
     padding: 0px 40px;
@@ -124,9 +135,7 @@ h2 {
     justify-content: center;
     gap: 40px;
     margin-top: 55px;
-
 }
-
 
 #caja4 {
     width: 49.5%;
@@ -147,17 +156,129 @@ h2 {
     margin-top: -10px;
 }
 #caja4 img {
-    margin-top: 55px;
+    margin-top: 15px;
+    margin-left: 180px;
+    filter: drop-shadow(0px 0px 5px #3C619A);
+    transform: rotate(10deg);
 }
+
+
 
 footer {
     background: #121212;
     background-image: url(../img/Rectangle\ 5.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
+    height: 400px;
+    padding: 20px 40px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
 }
 footer h2 {
     -webkit-text-stroke: 1px #00D400;
-    color: transparent; 
+    color: transparent;
+    text-align: right;
+}
+
+.enlaces h3 {
+    font-size: 18px;
+    color: white;
+    -webkit-background-clip: text;
+    color: transparent;  
+    padding: 0px 40px;
+}
+.enlaces ul {
+    list-style: none;
+}
+.enlaces ul li {
+    padding: 5px 0px;
+}
+.enlaces ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+.textos-legales {
+    display: flex;
+    justify-content: center;
+}
+
+.textos-legales ul {
+    list-style: none;
+}
+.textos-legales ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    color: white;
+}
+.textos-legales ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+small {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+/*------------------------------------PRODUCTOS------------------------------------*/
+#cajas-productos {
+    height: 10850px;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.caja-articulo {
+    background: #121212;
+    border-radius: 35px;
+    height: 400px;
+    margin-bottom: 10px;
+    border: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-articulo .imagen {
+    float: left;
+    width: 30%;
+    padding: 20px;
+}
+.caja-articulo .imagen img {
+
+}
+
+.caja-articulo .texto {
+    float: right;
+    width: 60%;
+    padding: 20px;
+}
+.caja-articulo .texto h2 {
+    color: #00D400;
+    float: left;
+    font-size: 38px;
+
+}
+.caja-articulo .texto h3 {
+    color: #00D400;
+    float: left;
+    font-size: 38px;
+}
+.caja-articulo .texto p {
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
 }
