@@ -297,6 +297,7 @@ h2 {
     -webkit-background-clip: text !important;
     color: transparent !important;  
     font-size: 28px;
+    text-align: left;
     
  }
 
@@ -319,8 +320,8 @@ h2 {
 
 
 footer {
-    background: #121212;
-    background-image: url(../img/Rectangle\ 5.png);
+    background: rgb(18, 18, 18);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.5)), url(../img/Rectangle\ 5.png);
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
@@ -337,7 +338,7 @@ footer .enlaces h3{
     color: white;
 }
 
-footer  .enlaces {
+footer .enlaces {
     margin-top: -80px;
 }
 .enlaces h3 {
@@ -397,34 +398,32 @@ small {
     margin: 100px 0px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
+}
+
+#cajas-productos a{
+    display: flex;
+    text-decoration: none;
 }
 
 .caja-articulo {
     background: #121212;
     border-radius: 35px;
     height: 350px;
-    margin-bottom: 10px;
     border: none;
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .caja-articulo .imagen {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    float: left;
     width: 30%;
     padding: 20px;
 }
 
 .caja-articulo .texto {
-    float: right;
     width: 60%;
     padding: 20px;
 }
@@ -432,7 +431,7 @@ small {
     color: #00D400;
     float: left;
     font-size: 30px;
-    width: 50%;
+    width: 50%; 
     text-align: left;
 }
 .caja-articulo .texto h3 {
@@ -445,11 +444,10 @@ small {
 .caja-articulo .texto p {
     color: white;
     font-size: 20px;
-    margin-top: 20px;
+    display: inline-block;
+    margin: 0px;
 }
-#cajas-productos a {
-    display: flex;
-}
+
 
 
 
@@ -458,11 +456,12 @@ small {
     background: #121212;
     display: flex;
     flex-direction: column;
-    background-image: url(../img/Rectangle\ 5.png);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.7)), url(../img/Rectangle\ 5.png);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 35px;
     margin-top: 100px;
+    
 }
 
 .imagen-texto {
@@ -488,7 +487,7 @@ small {
     text-align: left;
     font-size: 32px;
     font-weight: 600;
-
+    margin: 0px;
 }
 .texto-descripcion ul {
     margin: 0px;
@@ -587,7 +586,7 @@ small {
     margin: auto;
 }
 
-#marcas .cajas-marcas .caja1,#marcas .cajas-marcas .caja2, #marcas .cajas-marcas .caja3 {
+#marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
     display: flex;
     flex-direction: column;
     width: 33%;
@@ -605,13 +604,13 @@ small {
         margin-top: 100px;
 }
 
-#cajas-contacto .caja1 h2, .caja2 h2{
+#cajas-contacto .caja1-contacto h2, .caja2-contacto h2{
     text-indent: 40px;
     text-align: left;
     color: white;
 }
 
-#cajas-contacto .caja1 {
+#cajas-contacto .caja1-contacto {
     width: 60%;
     height: 450px;
     display: flex;
@@ -621,12 +620,12 @@ small {
     position: relative;
     overflow: hidden;
 }
-#cajas-contacto .caja1 .iframe {
+#cajas-contacto .caja1-contacto .iframe {
     position: absolute;
     right: 0;
     bottom: 0;
 }
-#cajas-contacto .caja2 {
+#cajas-contacto .caja2-contacto {
     width: 39%;
     height: 450px;
     display: flex;
@@ -634,11 +633,11 @@ small {
     background: #121212;
     border-radius: 35px;
 }
-#cajas-contacto .caja2 hr {
+#cajas-contacto .caja2-contacto hr {
     width: 100%;
     color: white;
 }
-#cajas-contacto .caja2 h3 {
+#cajas-contacto .caja2-contacto h3 {
     color: white;
     text-align: center;
     font-weight: 200;
