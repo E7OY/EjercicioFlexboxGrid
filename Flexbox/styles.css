@@ -436,7 +436,7 @@ small {
     border: 2px solid #00D400;
     border-radius: 25px;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 }
 .caja-color1 h3 {
     color: #00D400;
@@ -445,15 +445,11 @@ small {
     border: 2px solid #8C8C8C;
     border-radius: 25px;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 }
 .caja-color2 h3 {
     color: #8C8C8C;
 }
-.caja-color2:hover {
-    background: #00D400;
-}
-/* hacer que cuando nos pongamos sobre la caja 2 se ponga el color #00D400 y si pinchamos en la caja se quede ese color: */
 
 
 

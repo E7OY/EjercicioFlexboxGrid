@@ -118,5 +118,38 @@
     </footer>
 
     <script src="main.js"></script>   
+    <script>
+    document.querySelector('.caja-color2').addEventListener('click', function() {
+        var caja1 = document.querySelector('.caja-color1');
+        var caja1Titulo = document.querySelector('.caja-color1 h3');
+
+        var caja2Titulo = document.querySelector('.caja-color2 h3');
+        var caja2 = document.querySelector('.caja-color2');
+
+
+        if (caja2) {
+            caja1.style.borderColor = '#8C8C8C';
+            caja1Titulo.style.color = '#8C8C8C'; // Cambia 'fontColor' a 'color'
+            caja2.style.borderColor = '#00D400';
+            caja2Titulo.style.color = '#00D400'; // Cambia 'fontColor' a 'color'
+        }
+    });
+    document.querySelector('.caja-color1').addEventListener('click', function() {
+    var caja1 = document.querySelector('.caja-color1');
+    var caja1Titulo = document.querySelector('.caja-color1 h3');
+
+    var caja2Titulo = document.querySelector('.caja-color2 h3');
+    var caja2 = document.querySelector('.caja-color2');
+
+    if (caja1) {
+        caja1.style.borderColor = '#00D400';
+        caja1Titulo.style.color = '#00D400';
+        caja2.style.borderColor = '#8C8C8C';
+        caja2Titulo.style.color = '#8C8C8C';
+    }
+});
+
+
+    </script>
 </body>
 </html>
