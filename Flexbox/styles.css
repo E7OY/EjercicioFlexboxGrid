@@ -227,6 +227,9 @@ footer h2 {
     color: transparent;
     text-align: right;
 }
+footer .enlaces h3{
+    color: white;
+}
 
 .enlaces h3 {
     font-size: 18px;
@@ -341,6 +344,151 @@ small {
 
 
 
+/*------------------------------------PRODUCTO1------------------------------------*/
+#descripcion {
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    background-image: url(../img/Rectangle\ 5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+}
+
+.imagen-texto {
+    display: flex;
+}
+
+.imagen-descripcion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    width: 50%;
+}
+.texto-descripcion {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 50%;
+}
+
+.texto-descripcion h2 {
+    color: #00D400;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 600;
+
+}
+.texto-descripcion ul {
+    margin: 0px;
+    padding: 0px;
+    width: 60%;
+}
+.texto-descripcion li {
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.cajas-descripcion {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.caja-envio {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 20%;
+    border: 2px solid #8C8C8C;
+    border-radius: 35px;
+    padding: 30px;
+}
+.caja-envio img {
+    float: left;
+}
+.caja-envio h3 {
+    float: right;
+    color: white;
+     font-size: 16px;
+    font-weight: 600;
+}
+
+.cajas-colores {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 40%;
+    height: 100%;
+    gap: 20px;
+}
+.caja-color1 {
+    border: 2px solid #00D400;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px;
+}
+.caja-color1 h3 {
+    color: #00D400;
+}
+.caja-color2 {
+    border: 2px solid #8C8C8C;
+    border-radius: 25px;
+    width: 100%;
+    padding: 20px;
+}
+.caja-color2 h3 {
+    color: #8C8C8C;
+}
+.caja-color2:hover {
+    background: #00D400;
+}
+/* hacer que cuando nos pongamos sobre la caja 2 se ponga el color #00D400 y si pinchamos en la caja se quede ese color: */
+
+
+
+#marcas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cajas-marcas {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;    
+    width: 100%;
+}
+.cajas-marcas h3 {
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px !important;
+    margin-bottom: 80px;
+}
+.cajas-marcas img {
+    margin: auto;
+}
+
+.cajas-marcas .caja1, .cajas-marcas .caja2, .cajas-marcas .caja3 {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 300px;
+    background: #121212;
+    border-radius: 35px;
+}
 
 /*------------------------------------CONTACTO------------------------------------*/
 #cajas-contacto {
@@ -403,4 +551,93 @@ small {
 body.dark {
     transition: 2s ease all;
     background-color: rgb(255, 255, 255);
+}
+
+body.dark header {
+    background: #eee;
+}
+
+body.dark header nav a {
+    color: #121212;
+}
+
+body.dark main h1 {
+    background: linear-gradient(#121212, #ccc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body.dark .caja {
+    background: #eee;
+}
+body.dark #caja1 h2 {
+    background: linear-gradient(to right, #121212 0%,#44D62C 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+body.dark #caja2 h2 {
+    background: linear-gradient( #121212 0%,#7E7E7E 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+body.dark #caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#121212 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+body.dark #caja1 h3,body.dark #caja3 h3,body.dark #caja4 h3 {
+    color: #424242;
+}
+body.dark footer {
+    background: #eee;
+}
+body.dark footer {
+    background-image: url(../img/fondoLightModeFooter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 400px;
+    padding: 20px 40px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+body.dark footer h2 {
+    -webkit-text-stroke: 1px #00D400;
+    color: #121212;
+}
+body.dark footer h3 {
+    color: #0d0d0d;
+}
+body.dark footer a, body.dark footer li, body.dark small {
+    color: #121212;
+}
+
+
+
+
+
+
+body.dark .caja-articulo {
+    background: #eee;
+}
+body.dark .caja-articulo p{
+    color: #121212;
+}
+
+
+
+
+
+body.dark .caja1, body.dark .caja2 {
+    background: #eee;
+}
+
+body.dark .caja1 h2, body.dark .caja2 h2{
+color: #121212;
+}
+body.dark #cajas-contacto hr{
+    color: #121212;
+}
+body.dark .caja2 h3, body.dark .caja2 a {
+    color: #121212;
 }
