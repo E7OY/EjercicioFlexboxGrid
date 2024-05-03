@@ -1,6 +1,6 @@
 body {
     background-color: black;
-    width: 1100px;
+    max-width: 1100px;
     margin: auto;
     font-family: Inter, sans-serif;
 }
@@ -10,7 +10,6 @@ button {
     position: absolute;
     float: right;
     bottom: 5px;
-    left: 20px;    
 }
 
 .switch {
@@ -59,6 +58,7 @@ header {
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;
     display: flex;
+    justify-content: center;
     flex-direction: row;
     align-content: center;
     align-items: center;
@@ -80,10 +80,10 @@ header nav a {
 
 
 main {
-    margin-top: 100px;
 }
 
 h1 {
+    margin-top: 100px;
     font-size: 50px;
     text-align: center;
     background: linear-gradient(#FFFFFF,#999999);
@@ -94,15 +94,19 @@ h1 {
 h2 {
     text-align: center;
     color: #999999;
+    margin-bottom: 100px;
 }
 
+/*
 #cajas {
+    width: 100%;
     height: 850px;
     margin-top: 100px;
-}
-
-#cajas a{
-    text-decoration: none;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+    gap: 20px;
 }
 
 .caja {
@@ -111,7 +115,16 @@ h2 {
     height: 400px;
     margin-bottom: 10px;
     border: none;
+    display: flex;
+    gap: 10px;
+    flex: 0 0 calc(50% - 10px);
 }
+
+
+#cajas a{
+    text-decoration: none;
+}
+
 .caja:hover {
     transform: scale(1.05);
     transition: 1.2s;
@@ -120,8 +133,8 @@ h2 {
 }
 
 #caja1 {
-    width: 70%;
-    float: left;
+    width: 120%;
+
 }
 #caja1 h2 {
     font-size: 40px;
@@ -143,8 +156,8 @@ h2 {
 }
 
 #caja2 {
-    width: 29%;
-    float: right;
+    width: 120%;
+
 }
 #caja2 h2 {
     font-size: 32px;
@@ -161,8 +174,6 @@ h2 {
 }
 
 #caja3 {
-    width: 49.5%;
-    float: left;
 }
 #caja3 h2 {
     font-size: 32px;
@@ -186,8 +197,6 @@ h2 {
 }
 
 #caja4 {
-    width: 49.5%;
-    float: right;
 }
 #caja4 h2 {
     font-size: 32px;
@@ -209,6 +218,103 @@ h2 {
     filter: drop-shadow(0px 0px 5px #3C619A);
     transform: rotate(10deg);
 }
+*/
+#cajas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 100px;
+}
+
+.caja {
+    flex: 0 0 calc(50% - 10px); /* Cada caja tomará el 50% del espacio disponible, menos 20px para tener en cuenta el margen */
+    margin-bottom: 10px;
+    background: #121212;
+    border-radius: 35px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.caja:hover {
+    transform: scale(1.05);
+    transition: 1.2s;
+    outline: 4px solid #00D400;
+    text-decoration: none;
+}
+
+.caja1 {
+    flex: 0 0 calc(70% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
+}
+
+.caja2 {
+    flex: 0 0 calc(30% - 10px);
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.caja2 img {
+    width: calc(50% - 10px); /* Define un ancho para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
+}
+
+.caja3 {
+    flex: 0 0 calc(55% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
+}
+
+.caja4 {
+    flex: 0 0 calc(45% - 10px); /* La caja2 tomará el 40% del espacio disponible, menos 20px para tener en cuenta el margen */
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .caja, .caja1, .caja2, .caja3, .caja4 {
+        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
+    }
+}
+
+.caja h2 {
+    font-size: 32px;
+    text-align: center;
+}
+.caja h3 {
+    margin-top: -90px;
+}
+
+.caja1 h2 {
+    background: linear-gradient(to right, #FFFFFF 0%,#44D62C 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+}
+ 
+ .caja2 h2 {
+    background: linear-gradient( #FFFFFF 0%,#7E7E7E 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+    font-size: 28px;
+    
+ }
+
+ .caja3 h2 {
+    background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
+    -webkit-background-clip: text;
+    color: transparent;  
+
+ }
+
+ .caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#fff 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+
+ }
+
+
 
 
 
@@ -231,6 +337,9 @@ footer .enlaces h3{
     color: white;
 }
 
+footer  .enlaces {
+    margin-top: -80px;
+}
 .enlaces h3 {
     font-size: 18px;
     color: white;
@@ -242,7 +351,7 @@ footer .enlaces h3{
     list-style: none;
 }
 .enlaces ul li {
-    padding: 5px 0px;
+    padding: 12px 0px;
 }
 .enlaces ul li a {
     color: white;
@@ -353,6 +462,7 @@ small {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 35px;
+    margin-top: 100px;
 }
 
 .imagen-texto {
@@ -477,7 +587,7 @@ small {
     margin: auto;
 }
 
-.cajas-marcas .caja1, .cajas-marcas .caja2, .cajas-marcas .caja3 {
+#marcas .cajas-marcas .caja1,#marcas .cajas-marcas .caja2, #marcas .cajas-marcas .caja3 {
     display: flex;
     flex-direction: column;
     width: 33%;
@@ -492,15 +602,16 @@ small {
         margin-bottom: 100px;
         gap: 10px;
         flex-direction: row;
+        margin-top: 100px;
 }
 
-.caja1 h2, .caja2 h2{
+#cajas-contacto .caja1 h2, .caja2 h2{
     text-indent: 40px;
     text-align: left;
     color: white;
 }
 
-.caja1 {
+#cajas-contacto .caja1 {
     width: 60%;
     height: 450px;
     display: flex;
@@ -510,12 +621,12 @@ small {
     position: relative;
     overflow: hidden;
 }
-.caja1 .iframe {
+#cajas-contacto .caja1 .iframe {
     position: absolute;
     right: 0;
     bottom: 0;
 }
-.caja2 {
+#cajas-contacto .caja2 {
     width: 39%;
     height: 450px;
     display: flex;
@@ -523,16 +634,15 @@ small {
     background: #121212;
     border-radius: 35px;
 }
-.caja2 hr {
+#cajas-contacto .caja2 hr {
     width: 100%;
     color: white;
 }
-.caja2 h3 {
+#cajas-contacto .caja2 h3 {
     color: white;
     text-align: center;
     font-weight: 200;
     font-size: 14px;
-    padding: 10px;
 }
 
 
@@ -637,3 +747,33 @@ body.dark #cajas-contacto hr{
 body.dark .caja2 h3, body.dark .caja2 a {
     color: #121212;
 }
+
+.header-menu-responsive {
+    display: none;
+}
+
+/*--------------------------------------RESPONSIVE--------------------------------------*/
+@media only screen and (max-width: 1124px) {
+
+
+}
+
+@media only screen and (max-width: 946px){
+    header {
+        justify-content: center;
+    }
+    header nav ul li{
+        display: block;
+        padding: 10px 0px;
+        justify-content: space-between;
+    }
+    button {
+        top: 10px;
+    }
+
+
+
+}
+
+
+

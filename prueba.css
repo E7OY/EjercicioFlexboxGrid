@@ -1,0 +1,65 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+    background-color: black;
+    max-width: 1100px;
+    margin: auto;
+    font-family: Inter, sans-serif;
+}
+
+#cajas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.caja {
+    flex: 0 0 calc(50% - 20px); /* Cada caja tomará el 50% del espacio disponible, menos 20px para tener en cuenta el margen */
+    margin-bottom: 20px;
+    background: #121212;
+    border-radius: 35px;
+    height: 400px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+.caja h2 {
+    font-size: 32px;
+    text-align: center;
+    color: transparent;  
+}
+.caja h3 {
+    margin-top: -50px;
+}
+
+ .caja1 h2 {
+    background: linear-gradient( #FFFFFF 0%,#7E7E7E 100%);
+    -webkit-background-clip: text;
+ }
+ 
+ .caja2 h2 {
+    background: linear-gradient(to right, #FFFFFF 0%,#44D62C 100%);
+    -webkit-background-clip: text;
+ }
+
+ .caja3 h2 {
+    background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
+    -webkit-background-clip: text;
+ }
+
+ .caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#fff 100%);
+    -webkit-background-clip: text;
+ }
+
+
+
+
+@media screen and (max-width: 600px) {
+    .caja {
+        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
+    }
+}
