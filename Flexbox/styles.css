@@ -257,6 +257,9 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
+.imagenes2 {
+    margin-top: -90px;
+}
 .caja2 img {
     width: calc(50% - 10px); /* Define un ancho para las imágenes */
     object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
@@ -298,22 +301,22 @@ h2 {
     color: transparent !important;  
     font-size: 28px;
     text-align: left;
-    
- }
+    padding: 20px 40px;
+}
 
- .caja3 h2 {
+.caja3 h2 {
     background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
     -webkit-background-clip: text;
     color: transparent;  
 
- }
+}
 
- .caja4 h2 {
+.caja4 h2 {
     background: linear-gradient(to right, #3C619A 0%,#fff 100%);
     -webkit-background-clip: text;
     color: transparent;  
 
- }
+}
 
 
 
@@ -413,6 +416,7 @@ small {
     border: none;
     width: 100%;
     display: flex;
+    flex-direction: column;
 }
 
 .caja-articulo .imagen {
@@ -451,7 +455,6 @@ small {
 
 
 
-
 /*------------------------------------PRODUCTO1------------------------------------*/
 #descripcion {
     background: #121212;
@@ -462,7 +465,6 @@ small {
     background-repeat: no-repeat;
     border-radius: 35px;
     margin-top: 100px;
-    
 }
 
 .imagen-texto {
@@ -579,10 +581,14 @@ small {
 .cajas-marcas h3 {
     color: white;
     text-align: center;
-    font-weight: 500;
-    font-size: 16px !important;
+    font-weight: 400;
     margin-bottom: 80px;
+    font-weight: 550;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 20px;
 }
+
 .cajas-marcas img {
     margin: auto;
 }
@@ -676,22 +682,22 @@ body.dark main h1 {
 body.dark .caja {
     background: #eee;
 }
-body.dark #caja1 h2 {
-    background: linear-gradient(to right, #121212 0%,#44D62C 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+body.dark .caja1 h2 {
+        background: linear-gradient(to right, #121212 0%,#44D62C 100%) !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;  
 }
-body.dark #caja2 h2 {
-    background: linear-gradient( #121212 0%,#7E7E7E 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+body.dark .caja2 h2 {
+    background: linear-gradient( #121212 0%,#7E7E7E 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 }
-body.dark #caja4 h2 {
-    background: linear-gradient(to right, #3C619A 0%,#121212 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+body.dark .caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#121212 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
 }
-body.dark #caja1 h3,body.dark #caja3 h3,body.dark #caja4 h3 {
+body.dark .caja1 h3,body.dark .caja3 h3,body.dark .caja4 h3 {
     color: #424242;
 }
 body.dark footer {
@@ -717,9 +723,26 @@ body.dark footer h3 {
 body.dark footer a, body.dark footer li, body.dark small {
     color: #121212;
 }
+body.dark .enlaces h3 {
+    color: black;
+}
 
 
+body.dark #cajas-contacto .caja1-contacto, body.dark #cajas-contacto .caja2-contacto {
+    background: #eee;
+}
 
+body.dark #cajas-contacto .caja1-contacto h2, body.dark #cajas-contacto .caja2-contacto h2{
+    color: #121212;
+}
+
+body.dark #cajas-contacto .caja2-contacto hr{
+    color: #121212;
+}
+body.dark #cajas-contacto .caja2-contacto h3 {
+    color: #121212;
+}
+ 
 
 
 
@@ -748,13 +771,31 @@ body.dark .caja2 h3, body.dark .caja2 a {
     color: #121212;
 }
 
-.header-menu-responsive {
-    display: none;
+
+
+
+
+body.dark #descripcion {
+    background: rgb(238, 238, 238);
+    background-image: linear-gradient(rgb(238, 238, 238), rgb(238, 238, 238)), url(../img/Rectangle\ 5.png);
 }
+body.dark .texto-descripcion li {
+    color: #121212;
+}
+body.dark .caja-envio h3 {
+    color: #121212;
+}
+body.dark #marcas .cajas-marcas .caja1m,body.dark #marcas .cajas-marcas .caja2m,body.dark #marcas .cajas-marcas .caja3m {
+    background: #eee;
+}
+body.dark #marcas .cajas-marcas h3 {
+    color: #7E7E7E;
+}
+
+
 
 /*--------------------------------------RESPONSIVE--------------------------------------*/
 @media only screen and (max-width: 1124px) {
-
 
 }
 
@@ -771,6 +812,15 @@ body.dark .caja2 h3, body.dark .caja2 a {
         top: 10px;
     }
 
+    #cajas-contacto {
+        flex-direction: column;
+    }
+
+
+    #cajas-contacto .caja1-contacto, #cajas-contacto .caja2-contacto {
+        width: 100%;
+        height: 450px;
+    }
 
 
 }
