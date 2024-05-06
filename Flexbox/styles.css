@@ -1,3 +1,101 @@
+.menu_bar {
+	display:none;
+}
+
+header nav {
+	z-index:1000;
+	max-width: 1000px;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:#00D400;
+    border-radius: 5px;
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#121212;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+ 		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+    header a {
+        padding: 40px;
+        position: relative;
+        bottom: 0;
+    }
+
+	.menu_bar span {
+        float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+        background: #121212;
+		width: 80%;
+ 		position: fixed;
+  		margin: 50px auto 0px auto;
+        height: 80%;
+ 	}
+
+    button {
+        width: 20%;     
+        margin-top: 20px;   
+    }
+
+     header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        margin-top: -50px;
+    }
+
+    
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;    
+	}
+}
+
+
+
+
+nav.open {
+    display: block;
+}
+
+
 body {
     background-color: black;
     max-width: 1100px;
@@ -9,7 +107,8 @@ button {
     transition: 2s ease all;
     position: absolute;
     float: right;
-    bottom: 5px;
+    top: 10px;
+    left: 10px;
 }
 
 .switch {
@@ -94,8 +193,7 @@ h1 {
 h2 {
     text-align: center;
     color: #999999;
-    width: 60%;
-    margin: auto;
+    width: 70%;
     margin-bottom: 100px;
 }
 
@@ -329,7 +427,7 @@ footer {
     background-image: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.5)), url(../img/Rectangle\ 5.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: auto;
     padding: 20px 40px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
@@ -357,12 +455,18 @@ footer .enlaces {
     list-style: none;
 }
 .enlaces ul li {
-    padding: 12px 0px;
+    padding: 15px 0px;
 }
+.enlaces ul li :hover {
+    background:#00D400;
+    border-radius: 5px;
+}
+
 .enlaces ul li a {
     color: white;
     text-decoration: none;
     font-weight: 200;
+     padding: 10px 10px;
 }
 
 .textos-legales {
@@ -381,6 +485,12 @@ footer .enlaces {
 .textos-legales ul li a {
     text-decoration: none;
     color: white;
+    padding: 10px 10px;
+}
+
+.textos-legales ul li :hover {
+    background:#00D400;
+    border-radius: 5px;
 }
 
 small {
@@ -389,10 +499,19 @@ small {
     text-align: center;
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 50px 0;
 }
 
+span {
+    color: #2980cc;
+    text-decoration: underline;
+    font-size: 15px;
+}
 
+span:active {
+    color: #2980cc;
+
+}
 
 
 
@@ -709,7 +828,7 @@ body.dark footer {
     background-image: url(../img/fondoLightModeFooter.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 400px;
+    height: auto;
     padding: 20px 40px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
@@ -842,6 +961,7 @@ body.dark #marcas .cajas-marcas h3 {
         width: 100%;
         height: 450px;
     }
+
 
 
 }
