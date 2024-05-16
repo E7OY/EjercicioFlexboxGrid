@@ -272,19 +272,40 @@ h2 {
 .caja1 {
     flex: 0 0 calc(70% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
 }
+.caja1_5 {
+        flex: 0 0 calc(30% - 10px);
+        display: flex;
+        flex-direction: row; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+}
 
 .caja2 {
-    flex: 0 0 calc(30% - 10px);
+    flex: 0 0 calc(100% - 10px);
     display: flex;
     flex-direction: row; 
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.imagenes2 {
-    margin-top: -90px;
+.imagenes, .imagenes2, .imagenes3, .imagenes4{
+    position: relative;
 }
+.imagenes1_5 {
+    position: relative;
+    margin: -150px auto 0 auto;
+
+}
+.imagenes2 {
+    margin-top: -130px;
+    position: relative
+}
+.imagenRatonNegro {
+    position: relative;
+    bottom: 90px ;
+}
+
 .caja2 img {
-    width: calc(50% - 10px); /* Define un ancho para las imágenes */
+    width: calc(35% - 10px); /* Define un ancho para las imágenes */
     object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
 }
 
@@ -326,7 +347,14 @@ h2 {
     text-align: left;
     padding: 20px 40px;
 }
-
+.caja1_5 h2 {
+    background: linear-gradient( #FFFFFF 0%,#440844 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+    font-size: 28px;
+    text-align: left;
+    padding: 20px 40px;
+}
 .caja3 h2 {
     background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
     -webkit-background-clip: text;
