@@ -20,7 +20,18 @@ header nav ul li:hover {
 	background:#00D400;
     border-radius: 5px;
 }
+header .activo{
+    background:#00D400;
+    border-radius: 5px;
 
+}
+footer .activo {
+    background:#00D400;
+    border-radius: 5px;
+    padding: 15px 0px;
+    display: inline-block;
+
+ }
 header nav ul li a {
 	color:#fff;
 	display:block;
