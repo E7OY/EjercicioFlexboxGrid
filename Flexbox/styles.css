@@ -293,12 +293,16 @@ h2 {
 .imagenes1_5 {
     position: relative;
     margin: -150px auto 0 auto;
-
 }
 .imagenes2 {
     margin-top: -130px;
     position: relative
 }
+.imagenes3 {
+    transform: rotate(-10deg);
+    margin-bottom: 40px;
+}
+ 
 .imagenRatonNegro {
     position: relative;
     bottom: 90px ;
