@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Contacto</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <img src="../img/razerLogo.png" width="200px" alt="logo razer">
+        </a>
+        <div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"><img src="../img/menu(2).png" width="30px" alt=""></span></a>
+		</div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="icon-house"></span>Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li class="activo"><a href="contacto.html">Contacto</a></li>
+            <button class="switch" id="switch">
+                <span><img src="../img/moon-solid.svg" width="15px"></span>
+                <span><img src="../img/sun-solid.svg" width="15px"></span>
+            </button>
+        </ul>
+    </nav>    
+</header>
+
+    <main>
+        
+        <div id="cajas-contacto">
+        <div class="caja1-contacto">
+            <h2>¿Donde estamos?</h2>
+            <iframe class="iframe" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d23214.025218087085!2d-8.4054122!3d43.34035425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1714472735944!5m2!1ses!2ses" width="550" height="400" style="border:0; border-radius: 35px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="caja2-contacto">
+            <h2>Contacto</h2>
+            <h3>Plaza Padre Rubinos 14, 15007 A Coruña</h3>
+            <hr>
+            <h3>981 253 658</h3>
+            <hr>
+            <h3><a href="mailto:e.garcia@liceolapaz.net">e.garcia@liceolapaz.net</a></h3>
+            <hr>
+            <h3>Lunes a Viernes:<br>
+                Mañanas de 10:00 a 14:00<br>
+                Tardes de 17:00 a 21:00<br>
+                Sábados de 11:00 a 13:00
+            </h3>
+        </div>
+        </div>
+
+    </main>
+
+    <footer>
+        <h2>FOR GAMERS BY GAMERS.</h2>
+        <nav class="enlaces">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li class="activo"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="textos-legales">
+            <ul>
+                <li><a href="terminos-legales.html">Términos Legales</a></li>
+                <li class="oculto">|</li>
+                <li><a href="politicas-privacidad.html">Politicas de Privacidad</a></li>
+                <li class="oculto">|</li>
+                <li><a href="cookies.html">Configuración de cookies</a></li>
+            </ul>
+        </nav>
+        <small>
+            Copyright © Eloy García Martínez 
+        </small>
+    </footer>
+
+    <script src="main.js"></script>
+    <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+    <script type="text/javascript">
+        options = {
+        "cursorOuter": "circle-basic",
+        "hoverEffect": "circle-move",
+        "hoverItemMove": true,
+        "defaultCursor": true,
+        "outerWidth": 41,
+        "outerHeight": 41,
+          };
+        magicMouse(options);
+    </script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                var contador = 1;
+            
+                $('.bt-menu').click(function() {
+                    if (contador == 1) {
+                        $('nav').animate({
+                            left: '0'
+                        });
+                        contador = 0;
+                    } else {
+                        contador = 1;
+                        $('nav').animate({
+                            left: '-100%'
+                        });
+                    }
+                });
+            });
+        </script>
+</body>
+</html>

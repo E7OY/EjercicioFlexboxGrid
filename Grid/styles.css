@@ -1,0 +1,1084 @@
+.menu_bar {
+	display:none;
+}
+
+header nav {
+	z-index:1000;
+	max-width: 1000px;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:#00D400;
+    border-radius: 5px;
+}
+header .activo{
+    background:#00D400;
+    border-radius: 5px;
+
+}
+footer .activo {
+    background:#00D400;
+    border-radius: 5px;
+    padding: 15px 0px;
+    display: inline-block;
+
+ }
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#121212;
+	}
+    body.dark .menu_bar {
+		background:#eee;
+	}
+    body.dark header nav {
+        background: white;
+    }
+    body.dark header nav ul li {
+        border-bottom: 1px solid #121212;
+    }   
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+ 		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+    body.dark .menu_bar header nav a {
+        color: white;
+    } 
+
+    header a {
+        padding: 40px;
+        position: relative;
+        bottom: 0;
+    }
+
+	.menu_bar span {
+        float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+        background: #121212;
+		width: 80%;
+ 		position: fixed;
+  		margin: 450px auto 0px auto;
+        height: 100%;
+ 	}
+
+    button {
+        width: 20%;     
+        margin-top: 20px;   
+    } 
+
+     header nav ul {
+        display: grid;
+        grid-auto-flow: row;
+        justify-items: center;
+    }
+
+    
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+        width: 100%;
+        padding: 0px 10px;
+ 	}
+
+	header nav ul li a {
+		display: block;   
+        
+    }
+}
+
+
+
+
+nav.open {
+    display: block;
+}
+
+
+body {
+    background-color: black;
+    max-width: 1100px;
+    margin: auto;
+    font-family: Inter-Medium;
+}
+
+button {
+    transition: 2s ease all;
+    position: absolute;
+    float: right;
+    top: 10px;
+    left: 10px;
+}
+
+.switch {
+    background: orange;
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    outline: none;
+}
+.switch::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #00E300;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: 0.3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.switch.active {
+    background: #343d5b;
+    color: black;
+}
+.switch.active::after {
+    right: 0;
+    left: unset;
+}
+.switch span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    background-color: none;
+    color: white;
+}
+
+header {
+    height: 280px;
+    background: #121212;
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+
+header nav ul li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+
+
+
+main {
+}
+
+h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    background: linear-gradient(#FFFFFF,#999999);
+    -webkit-background-clip: text;
+    color: transparent;  
+}
+
+h2 {
+    text-align: center;
+    color: #999999;
+    width: 70%;
+    margin-bottom: 100px;
+}
+
+#cajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    justify-items: space-around;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+#cajas-primeras {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 10px;
+     margin-bottom: 10px;
+}
+
+.caja {
+    background: #121212;
+    border-radius: 35px;
+    height: 400px;
+    color: #fff;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.caja:hover {
+    transform: scale(1.05);
+    transition: 1.2s;
+    outline: 4px solid #00D400;
+    text-decoration: none;
+}
+
+.caja h3 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.caja:hover h3 {
+    transform: scale(1.1);
+}
+
+.caja::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00D400;
+    opacity: 0;
+}
+
+.caja:hover::before {
+    animation: colorFade 0.6s forwards;
+}
+
+@keyframes colorFade {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+ 
+.caja1 {
+    grid-column: 1;
+}
+
+.caja1_5 {
+    grid-column: 2;
+}
+
+
+.caja2 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 10px), 1fr));
+    justify-items: space-between;
+}
+
+.imagenes, .imagenes2, .imagenes3, .imagenes4{
+    position: relative;
+}
+
+.imagenes1_5 {
+    position: relative;
+    margin: -150px auto 0 auto;
+}
+
+.imagenes2 {
+    margin-top: -130px;
+    position: relative
+}
+
+.imagenes3 {
+    transform: rotate(-10deg);
+    margin-bottom: 40px;
+}
+
+.imagenRatonNegro {
+    position: relative;
+    bottom: 90px ;
+}
+
+.caja2 img {
+    width: calc(35% - 10px); /* Define un ancho para las imágenes */
+    object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
+}
+
+.caja3 {
+    
+}
+
+.caja4 {
+    
+ } 
+
+
+@media screen and (max-width: 600px) {
+    .caja, .caja1, .caja2, .caja3, .caja4 {
+        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
+    }
+}
+
+.caja h2 {
+    font-size: 32px;
+    text-align: center;
+}
+.caja h3 {
+    margin-top: -90px;
+}
+
+.caja1 h2 {
+    background: linear-gradient(to right, #FFFFFF 0%,#44D62C 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+}
+ 
+ .caja2 h2 {
+    background: linear-gradient( #FFFFFF 0%,#7E7E7E 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+    font-size: 28px;
+    text-align: left;
+    padding: 20px 40px;
+}
+.caja1_5 h2 {
+    background: linear-gradient( #FFFFFF 0%,#440844 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
+    font-size: 28px;
+    text-align: left;
+    padding: 20px 40px;
+}
+.caja3 h2 {
+    background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
+    -webkit-background-clip: text;
+    color: transparent;  
+
+}
+
+.caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#fff 100%);
+    -webkit-background-clip: text;
+    color: transparent;  
+
+}
+
+
+
+
+
+footer {
+    background: rgb(18, 18, 18);
+    background-image: linear-gradient(rgba(18, 18, 18, 0.5), rgba(18, 18, 18, 0.5)), url(../img/Rectangle\ 5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 20px 40px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+footer h2 {
+    -webkit-text-stroke: 1px #00D400;
+    color: transparent;
+    text-align: right;
+}
+footer .enlaces h3{
+    color: white;
+}
+
+footer .enlaces {
+    margin-top: -80px;
+}
+.enlaces h3 {
+    font-size: 18px;
+    color: white;
+    -webkit-background-clip: text;
+    color: transparent;  
+    padding: 0px 40px;
+}
+.enlaces ul {
+    list-style: none;
+}
+.enlaces ul li {
+    padding: 15px 0px;
+}
+.enlaces ul li :hover {
+    background:#00D400;
+    border-radius: 5px;
+}
+
+.enlaces ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 200;
+     padding: 10px 10px;
+}
+
+.textos-legales {
+    display: grid;
+    justify-content: center;
+}
+
+.textos-legales ul {
+    list-style: none;
+}
+.textos-legales ul li {
+    display: inline-block;
+    padding: 0px 10px;
+    color: white;
+}
+.textos-legales ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 10px;
+}
+
+.textos-legales ul li :hover {
+    background:#00D400;
+    border-radius: 5px;
+}
+
+small {
+    font-size: 15px;
+    color: white;
+    display: grid;
+    place-items: center;
+     margin: 50px 0;
+}
+
+span {
+    color: #2980cc;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+span:active {
+    color: #2980cc;
+
+}
+
+
+
+
+
+/*------------------------------------PRODUCTOS------------------------------------*/
+#cajas-productos {
+    margin: 100px 0px;
+    display: grid;
+    grid-auto-flow: row;
+    gap: 15px;
+}
+
+#cajas-productos a{
+    text-decoration: none;
+
+}
+
+.caja-articulo {
+    background: #121212;
+    border-radius: 35px;
+    height: 350px;
+    border: none;
+    width: 100%;
+    display: grid;
+  }
+
+.caja-articulo .imagen {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 30%;
+    padding: 20px;
+    float: right;
+}
+
+.caja-articulo .texto {
+    width: 60%;
+    padding: 20px;
+    float: left;
+}
+.caja-articulo .texto h2 {
+    color: #00D400;
+    float: left;
+    font-size: 30px;
+    width: 50%; 
+    text-align: left;
+}
+.caja-articulo .texto h3 {
+    color: #00D400;
+    float: left;
+    font-size: 25px;
+    width: 50%;
+    text-align: right;
+}
+.caja-articulo .texto p {
+    color: white;
+    font-size: 20px;
+    display: inline-block;
+    margin: 0px;
+}
+
+
+/*------------------------------------PRODUCTO1------------------------------------*/
+#descripcion {
+    background: #121212;
+    display: grid;
+    background-image: linear-gradient(rgba(18, 18, 18, 0.9), rgba(18, 18, 18, 0.7)), url(../img/Rectangle\ 5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 35px;
+    margin-top: 100px;
+}
+
+.imagen-texto {
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+.imagen-descripcion {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+     float: right;
+}
+.texto-descripcion {
+    display: grid;
+    flex-direction: column;
+    margin-top: 50px;
+ }
+
+.texto-descripcion h2 {
+    color: #00D400;
+    text-align: left;
+    font-size: 32px;
+    font-weight: 600;
+    margin: 0px;
+}
+.texto-descripcion ul {
+    margin: 0px;
+    padding: 0px;
+    width: 60%;
+}
+.texto-descripcion li {
+    color: white;
+    text-align: left;
+    margin-top: 20px;
+    text-decoration: none;
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+.cajas-descripcion {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    align-items: center;
+    grid-auto-flow: column;
+    margin-bottom: 50px;
+}
+
+.caja-envio {
+    display: grid;
+    grid-auto-flow: row;
+    align-items: center;
+    margin-top: 50px;
+    width: 40%;
+    border: 2px solid #8C8C8C;
+    border-radius: 35px;
+    padding: 30px;
+}
+.caja-envio img {
+    float: left;
+}
+.caja-envio h3 {
+    float: right;
+    color: white;
+     font-size: 16px;
+    font-weight: 600;
+}
+
+.cajas-colores {
+    display: grid;
+    grid-auto-flow: row;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+ }
+.caja-color1 {
+    border: 2px solid #00D400;
+    border-radius: 25px;
+    width: 80%;
+    height: 60px;
+    padding: 30px;
+}
+.caja-color1 h3 {
+    color: #00D400;
+}
+.caja-color2 {
+    border: 2px solid #8C8C8C;
+    border-radius: 25px;
+    width: 80%;
+    height: 60px;
+    padding: 30px;
+}
+.caja-color2 h3 {
+    color: #8C8C8C;
+}
+
+
+
+#marcas {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.cajas-marcas {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;    
+    width: 100%;
+}
+.cajas-marcas h3 {
+    color: white;
+    text-align: center;
+    font-weight: 400;
+    margin-bottom: 80px;
+    font-weight: 550;
+    text-align: center;
+    font-size: 17px;
+    margin-top: 20px;
+}
+
+.cajas-marcas img {
+    margin: auto;
+}
+
+#marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
+    display: grid;
+    grid-auto-flow: row;
+    width: 100%;
+    height: 300px;
+    background: #121212;
+    border-radius: 35px;
+    justify-items: center;
+    align-items: center;
+ }
+
+
+
+/*------------------------------------REGISTRO------------------------------------*/
+.formulario {
+    width: 100%;
+    background: #121212;
+    border-radius: 35px;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 100px 0px;
+    padding: 100px 0px; 
+}
+
+label {
+    color: #777777;
+    font-family: Inter-SemiBold;
+    font-size: 20px;
+    padding-right: 120px;
+    text-align: right;
+}
+
+input, textarea {
+    margin: 10px 0px;
+    color: #00D400;
+    font-size: 20px;
+    font-family: Inter-SemiBold;
+    background: #121212;
+    border: 2px solid #242424;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #242424;
+    margin-bottom: 20px;
+    width: 250px;
+    position: relative;
+    right: 0;
+   display: grid;
+   flex-direction: row;
+   justify-items: center;
+   align-items: center;
+}
+
+hr {
+  text-align: center;
+  height: 2px;
+  background: #242424;
+  border: 0;
+  margin: 20px 0px;
+}
+
+
+
+
+/*------------------------------------CONTACTO------------------------------------*/
+#cajas-contacto {
+        display: grid;
+        margin-bottom: 100px;
+        gap: 10px;
+        grid-auto-flow: column;
+        margin-top: 100px;
+        grid-template-columns: 60% 39%;
+ }
+
+#cajas-contacto .caja1-contacto h2, .caja2-contacto h2{
+    text-indent: 40px;
+    text-align: left;
+    color: white;
+}
+
+#cajas-contacto .caja1-contacto {
+     height: 550px;
+    display: grid;
+    float: left;
+    background: #121212;
+    border-radius: 35px;
+    position: relative;
+    overflow: hidden;
+}
+#cajas-contacto .caja1-contacto .iframe {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+#cajas-contacto .caja2-contacto {
+     height: 550px;
+    display: grid;
+    grid-auto-flow: row;
+    background: #121212;
+    border-radius: 35px;
+}
+#cajas-contacto .caja2-contacto hr {
+    width: 100%;
+    padding: 1px;
+    color: white;
+}
+#cajas-contacto .caja2-contacto h3 {
+    color: white;
+    text-align: center;
+    font-weight: 200;
+    font-size: 14px;
+}
+
+
+
+
+
+/*--------------------------------------DARKMODE   LIGHTMODE--------------------------------------*/
+
+body.dark {
+    transition: 2s ease all;
+    background-color: rgb(255, 255, 255);
+}
+
+body.dark header {
+    background: #eee;
+}
+
+body.dark header nav a {
+    color: #121212;
+}
+
+body.dark main h1 {
+    background: linear-gradient(#121212, #ccc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+body.dark .caja {
+    background: #eee;
+}
+body.dark .caja1 h2 {
+        background: linear-gradient(to right, #121212 0%,#44D62C 100%) !important;
+        -webkit-background-clip: text !important;
+        color: transparent !important;  
+}
+body.dark .caja2 h2 {
+    background: linear-gradient( #121212 0%,#7E7E7E 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+body.dark .caja4 h2 {
+    background: linear-gradient(to right, #3C619A 0%,#121212 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;
+}
+body.dark .caja1 h3,body.dark .caja3 h3,body.dark .caja4 h3 {
+    color: #424242;
+}
+body.dark footer {
+    background: #eee;
+}
+body.dark footer {
+    background-image: url(../img/fondoLightModeFooter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 20px 40px;
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+
+}
+body.dark footer h2 {
+    -webkit-text-stroke: 1px #00D400;
+    color: #121212;
+}
+body.dark footer h3 {
+    color: #0d0d0d;
+}
+body.dark footer a, body.dark footer li, body.dark small {
+    color: #121212;
+}
+body.dark .enlaces h3 {
+    color: black;
+}
+
+
+body.dark #cajas-contacto .caja1-contacto, body.dark #cajas-contacto .caja2-contacto {
+    background: #eee;
+}
+
+body.dark #cajas-contacto .caja1-contacto h2, body.dark #cajas-contacto .caja2-contacto h2{
+    color: #121212;
+}
+
+body.dark #cajas-contacto .caja2-contacto hr{
+    color: #121212;
+}
+body.dark #cajas-contacto .caja2-contacto h3 {
+    color: #121212;
+}
+ 
+
+
+
+body.dark .caja-articulo {
+    background: #eee;
+}
+body.dark .caja-articulo p{
+    color: #121212;
+}
+
+
+
+
+
+body.dark .caja1, body.dark .caja2 {
+    background: #eee;
+}
+
+body.dark .caja1 h2, body.dark .caja2 h2{
+color: #121212;
+}
+body.dark #cajas-contacto hr{
+    color: #121212;
+}
+body.dark .caja2 h3, body.dark .caja2 a {
+    color: #121212;
+}
+
+
+
+
+
+body.dark #descripcion {
+    background: rgb(238, 238, 238);
+    background-image: linear-gradient(rgb(238, 238, 238), rgb(238, 238, 238)), url(../img/Rectangle\ 5.png);
+}
+body.dark .texto-descripcion li {
+    color: #121212;
+}
+body.dark .caja-envio h3 {
+    color: #121212;
+}
+body.dark #marcas .cajas-marcas .caja1m,body.dark #marcas .cajas-marcas .caja2m,body.dark #marcas .cajas-marcas .caja3m {
+    background: #eee;
+}
+body.dark #marcas .cajas-marcas h3 {
+    color: #7E7E7E;
+}
+
+
+
+
+body.dark .formulario {
+    background: #eee;
+}
+body.dark .formulario input, body.dark .formulario textarea {
+    margin: 10px 0px;
+    color: #00D400;
+    font-size: 20px;
+    font-family: Inter-SemiBold;
+    background: #eee;
+    border: 2px solid #fff;
+    outline: none;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 0px #fff;
+    margin-bottom: 20px;
+    width: 250px;
+    position: relative;
+    right: 0;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+
+}
+/*--------------------------------------RESPONSIVE--------------------------------------*/
+@media only screen and (max-width: 1124px) {
+
+}
+
+@media only screen and (max-width: 946px){
+    body {
+        overflow-x: hidden;
+    }
+    
+    header {
+        justify-content: center;
+    }
+    header nav ul li{
+        display: block;
+        padding: 10px 0px;
+        justify-content: space-between;
+    }
+    button {
+        top: 10px;
+    }
+    h1 {
+        font-size: 34px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+     .textos-legales .oculto {
+        display: none;
+        margin-bottom: 0px;
+    }
+    .textos-legales ul li{
+        margin-bottom: 10px;
+    }
+
+    .enlaces ul li {
+        padding: 5px 0px;
+    }
+
+
+    /*------------------------------------CONTACTO------------------------------------*/
+    #cajas-contacto {
+        flex-direction: column;
+    }
+    #cajas-contacto .caja1-contacto, #cajas-contacto .caja2-contacto {
+        width: 100%;
+    }
+    
+    
+    .caja-articulo {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+   
+    .caja-articulo .imagen {
+        display: none;
+    }
+
+    .caja-articulo .texto {
+        width: 100%;
+    }
+
+    .caja-articulo .texto p {
+        margin-top: -50px;
+    }
+
+    
+
+}
+
+
+
+
+/*--------------------------------------FONTS--------------------------------------*/ 
+
+@font-face {
+    font-family: 'Inter-Thin';
+    src: url(../fonts/Inter-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-SemiBold';
+    src: url(../fonts/Inter-SemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url(../fonts/Inter-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url(../fonts/Inter-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-Light';
+    src: url(../fonts/Inter-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-ExtraLight';
+    src: url(../fonts/Inter-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-ExtraBold';
+    src: url(../fonts/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'Inter-Bold';
+    src: url(../fonts/Inter-Bold.ttf);
+}

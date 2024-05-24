@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Home</title>
+    <title>Registro</title>
 </head>
 <body>
 
@@ -18,9 +18,9 @@
 		</div>
     <nav>
         <ul>
-            <li class="activo"><a href="index.html"><span class="icon-house"></span>Inicio</a></li>
+            <li><a href="index.html"><span class="icon-house"></span>Inicio</a></li>
             <li><a href="productos.html">Productos</a></li>
-            <li><a href="registro.html">Registro</a></li>
+            <li class="activo"><a href="registro.html">Registro</a></li>
             <li><a href="contacto.html">Contacto</a></li>
             <button class="switch" id="switch">
                 <span><img src="../img/moon-solid.svg" width="15px"></span>
@@ -31,55 +31,59 @@
 </header>
 
     <main>
-        <h1>RAZER, PARA PROFESIONALES
-            <br>FOR GAMERS. BY GAMERS.
-        </h1>
-        <h2 style="margin:  0 auto 100px auto;">PRODUCTOS DISEÑADOS PARA UN JUEGO
-            PERFECTO CON TECNOLOGÍA ÚNICA
-        </h2>
-    
-        
+        <div class="formulario">
+            <form action="mailto:e.garcia@liceolapaz.net">
+                <label for="usuario">Usuario: </label>
+                <input type="text" name="usuario" id="usuario"><br />
 
-<div id="cajas-primeras">   
-        <div class="caja caja1">
-            <h2>NUEVO RAZER BLADE</h2>
-            <h3>UN BLADE MAYOR Y MAS LETAL</h3>
-            <div class="imagenes">
-                <img src="../img/portatil.png" width="220px" alt="imagen portatil">
-                <img src="../img/portatil2.png" width="220px" alt="imagen portatil desde arriba">
-            </div>
-        </div>
-        <div class="caja caja1_5">
-            <h2>RAZER SEIREN V3</h2>
-            <div class="imagenes1_5">
-                <img src="../img/razerseirenv3.png" width="100px" alt="imagen micro raazer seiren">
-            </div>
-        </div>
-    </div>  
-    <div id="cajas">
-        <div class="caja caja2">
-            <h2>RAZER<br>DEATHADDER <br>V3 PRO</h2>
-            <div class="imagenes2">
-                <img src="../img/ratonBlancocompleto.png" width="200px" alt="imagen ratonblanco">
-                <img class="imagenRatonNegro" src="../img/ratonNegrocompleto.png" width="200px" alt="imagen ratonnegro">
-            </div>
-        </div>
-        <div class="caja caja3">
-            <h2>EL TECLADO Nº1</h2>
-            <h3>PARA PROFESIONALES</h3>
-            <div class="imagenes3">
-                <img src="../img/tecladocompleto.png" width="350px" alt="imagen teclado"">
-                </div>
-        </div>
-        <div class="caja caja4">
-            <h2>RAZER NARI ULTIMATE</h2>
-            <h3>ILUMINA TU VOZ</h3>
-            <div class="imagenes4">
-                <img src="../img/cascps.png" width="180px" alt="imagen cascos">
-            </div>
-        </div>
-    </div>
+                <hr>
 
+                <label for="contrasenha">Contraseña: </label>
+                <input type="password" name="contrasenha" id="contrasenha"><br />
+
+                <hr>
+
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email"><br />
+
+                <hr>
+
+
+                <label for="nombre">Nombre: </label>
+                <input type="text" name="nombre" id="nombre"><br />
+
+                <hr>
+
+
+                <label for="primerApellido">Primer Apellido: </label>
+                <input type="text" name="primerApellido" id="primerApellido"><br />
+
+                <hr>
+
+                <label for="segundoApellido">Segundo Apellido:</label>
+                <input type="text" name="segundoApellido" id="segundoApellido"><br />
+
+                <hr>
+
+                <label for="fechaNacimiento">Fecha de Nacimiento: </label>
+                <input type="date" name="fechaNacimiento" id="fechaNacimiento"><br />
+
+                <hr>
+
+                <label for="telefono">Teléfono móvil: </label>
+                <input type="tel" name="telefono" id="telefono"><br />
+
+                <hr>
+
+                <label for="direccion">Dirección: </label>
+                <textarea name="direccion" id="direccion"></textarea><br />
+
+                <hr>
+
+                <label for="enviar"></label>
+                <input type="submit" name="Registro" style="margin-top: 50px;">
+            </form>
+        </div>
     </main>
 
     <footer>
@@ -87,9 +91,9 @@
         <nav class="enlaces">
             <h3>Enlaces</h3>
             <ul>
-                <li class="activo"><a href="index.html">Inicio</a></li>
+                <li><a href="index.html">Inicio</a></li>
                 <li><a href="productos.html">Productos</a></li>
-                <li><a href="registro.html">Registro</a></li>
+                <li class="activo"><a href="registro.html">Registro</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
