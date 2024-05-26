@@ -328,11 +328,11 @@ h2 {
 }
 
 .caja3 {
-    flex: 0 0 calc(55% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(50% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
 }
 
 .caja4 {
-    flex: 0 0 calc(45% - 10px); /* La caja2 tomará el 40% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(50% - 10px); /* La caja2 tomará el 40% del espacio disponible, menos 20px para tener en cuenta el margen */
 }
 
 
@@ -384,7 +384,7 @@ h2 {
     background: linear-gradient(to right, #3C619A 0%,#fff 100%);
     -webkit-background-clip: text;
     color: transparent;  
-
+    white-space: pre;
 }
 
 

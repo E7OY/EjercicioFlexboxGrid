@@ -302,6 +302,11 @@ h2 {
     justify-items: space-between;
 }
 
+.imagenes {
+    margin-bottom: 20px;
+
+}
+
 .imagenes, .imagenes2, .imagenes3, .imagenes4{
     position: relative;
 }
@@ -318,7 +323,11 @@ h2 {
 
 .imagenes3 {
     transform: rotate(-10deg);
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+}
+.imagenes4 {
+    position: relative;
+    bottom: 20px;
 }
 
 .imagenRatonNegro {
@@ -358,6 +367,7 @@ h2 {
     background: linear-gradient(to right, #FFFFFF 0%,#44D62C 100%) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;  
+    margin-top: 50px;
 }
  
  .caja2 h2 {
@@ -366,6 +376,8 @@ h2 {
     color: transparent !important;  
     font-size: 28px;
     text-align: left;
+    position: relative;
+    right: 120px;
     padding: 20px 40px;
 }
 .caja1_5 h2 {
@@ -379,7 +391,8 @@ h2 {
 .caja3 h2 {
     background: linear-gradient(to right,#00D400 20%, #740409 40%, #86841B 70%);
     -webkit-background-clip: text;
-    color: transparent;  
+    color: transparent;
+    margin-top: 50px;  
 
 }
 
@@ -387,7 +400,11 @@ h2 {
     background: linear-gradient(to right, #3C619A 0%,#fff 100%);
     -webkit-background-clip: text;
     color: transparent;  
-
+    margin-top: 40px;  
+}
+.caja4 h3 {
+    position: relative;
+    bottom: 10px;
 }
 
 
@@ -469,14 +486,21 @@ small {
     font-size: 15px;
     color: white;
     display: grid;
-    place-items: center;
-     margin: 50px 0;
+    grid-auto-flow: column;
+    justify-items: center;
+    align-items: center;
+    width: 30%;
+    margin: 50px auto;
 }
 
 span {
     color: #2980cc;
     text-decoration: underline;
-    font-size: 15px;
+    font-size: 15px;    
+    
+
+}
+span a {
 }
 
 span:active {
