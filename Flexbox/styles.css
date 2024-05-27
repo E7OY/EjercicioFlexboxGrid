@@ -513,8 +513,9 @@ span:active {
     justify-content: center;
     align-items: center;
     width: 30%;
-    padding: 20px;
     float: right;
+    position: relative;
+    left: 70px;
 }
 
 .caja-articulo .texto {

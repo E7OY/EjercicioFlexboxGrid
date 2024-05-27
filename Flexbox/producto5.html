@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>RAZER ENKI</title>
+</head>
+<body id="producto1">
+
+    <header>
+        <a href="index.html">
+            <img src="../img/razerLogo.png" width="200px" alt="logo razer">
+        </a>
+        <div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"><img src="../img/menu(2).png" width="30px" alt=""></span></a>
+		</div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="icon-house"></span>Inicio</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="registro.html">Registro</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <button class="switch" id="switch">
+                <span><img src="../img/moon-solid.svg" width="15px"></span>
+                <span><img src="../img/sun-solid.svg" width="15px"></span>
+            </button>
+        </ul>
+    </nav>    
+</header>
+
+    <main>
+
+
+
+        <div id="descripcion">
+            <div class="imagen-texto">
+                <div class="imagen-descripcion">
+                    <img src="../img/silla.png" width="300px" alt="imagen silla razer">
+                </div>
+                <div class="texto-descripcion">
+                    <h2>RAZER ENKI</h2>
+                    <p>
+                        <ul>
+                            <li>Sé rápido, gana a lo grande.</li>
+                            <li>Inclinación reactiva del asiento con hasta 152º de reclinación.</li>
+                            <li>Respaldo almohadillado de doble densidad.</li>
+                            <li>Tapizada con Alcantara®.</li>
+                        </ul>                        
+                    </p>
+                    <h2>900,21€</h2>
+                </div>
+            </div>
+
+            <div class="cajas-descripcion">
+                <div class="caja-envio">
+                    <img src="../img/camionEnvio.png" width="60px" alt="logo camion envio internacional">
+                    <h3>Entrega estimada:
+                        2 - 5 dias</h3>
+
+                    <img src="../img/paqueteEnvio.png" width="60px" alt="">
+                    <h3>Envío: 
+                        2,99€</h3>    
+                </div>
+                <div class="cajas-colores">
+                    <div class="caja-color1">
+                        <h3>Negra</h3>
+                    </div>
+                    <div class="caja-color2">
+                        <h3>Azul/Negra</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="marcas">
+            <div class="cajas-marcas">
+                <div class="caja1m">
+                    <img src="../img/inclinacion.png" width="80px" alt="imagen inclinacion">
+                    <h3>Inclinación ajustada al peso.</h3>
+                </div>
+                <div class="caja2m">
+                    <img src="../img/car-ch.png" width="80px" alt="imagen lumbar">
+                    <h3>Arco lumbar integrado.</h3>
+                </div>
+                <div class="caja3m">
+                    <img src="../img/conveniente.png" width="80px" alt="imagen comodidad">
+                    <h3>Comodidad y durabilidad superiores.</h3>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <h2>FOR GAMERS BY GAMERS.</h2>
+        <nav class="enlaces">
+            <h3>Enlaces</h3>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="registro.html">Registro</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <nav class="textos-legales">
+            <ul>
+                <li><a href="terminos-legales.html">Términos Legales</a></li>
+                <li class="oculto">|</li>
+                <li><a href="politicas-privacidad.html">Politicas de Privacidad</a></li>
+                <li class="oculto">|</li>
+                <li><a href="cookies.html">Configuración de cookies</a></li>
+            </ul>
+        </nav>
+        <small>
+            Copyright © Eloy García Martínez 
+        </small>
+    </footer>
+
+    <script src="main.js"></script>   
+    <script>
+    document.querySelector('.caja-color2').addEventListener('click', function() {
+        var caja1 = document.querySelector('.caja-color1');
+        var caja1Titulo = document.querySelector('.caja-color1 h3');
+
+        var caja2Titulo = document.querySelector('.caja-color2 h3');
+        var caja2 = document.querySelector('.caja-color2');
+
+
+        if (caja2) {
+            caja1.style.borderColor = '#8C8C8C';
+            caja1Titulo.style.color = '#8C8C8C'; // Cambia 'fontColor' a 'color'
+            caja2.style.borderColor = '#00D400';
+            caja2Titulo.style.color = '#00D400'; // Cambia 'fontColor' a 'color'
+        }
+    });
+    document.querySelector('.caja-color1').addEventListener('click', function() {
+    var caja1 = document.querySelector('.caja-color1');
+    var caja1Titulo = document.querySelector('.caja-color1 h3');
+
+    var caja2Titulo = document.querySelector('.caja-color2 h3');
+    var caja2 = document.querySelector('.caja-color2');
+
+    if (caja1) {
+        caja1.style.borderColor = '#00D400';
+        caja1Titulo.style.color = '#00D400';
+        caja2.style.borderColor = '#8C8C8C';
+        caja2Titulo.style.color = '#8C8C8C';
+    }
+});
+    </script>
+        <script type="text/javascript" src="https://res.cloudinary.com/veseylab/raw/upload/v1684982764/magicmouse-2.0.0.cdn.min.js"></script>
+        <script type="text/javascript">
+            options = {
+            "cursorOuter": "circle-basic",
+            "hoverEffect": "circle-move",
+            "hoverItemMove": true,
+            "defaultCursor": true,
+            "outerWidth": 41,
+            "outerHeight": 41,
+              };
+            magicMouse(options);
+    </script>
+    <script type="text/javascript">
+            $(document).ready(function() {
+                var contador = 1;
+            
+                $('.bt-menu').click(function() {
+                    if (contador == 1) {
+                        $('nav').animate({
+                            left: '0'
+                        });
+                        contador = 0;
+                    } else {
+                        contador = 1;
+                        $('nav').animate({
+                            left: '-100%'
+                        });
+                    }
+                });
+            });
+    </script>
+</body>
+</html>
