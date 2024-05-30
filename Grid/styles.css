@@ -223,19 +223,6 @@ h2 {
     margin-bottom: 100px;
 }
 
-#cajas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
-    justify-items: space-around;
-    gap: 10px;
-    margin-bottom: 100px;
-}
-#cajas-primeras {
-    display: grid;
-    grid-template-columns: 70% 30%;
-    gap: 10px;
-     margin-bottom: 10px;
-}
 
 .caja {
     background: #121212;
@@ -249,22 +236,18 @@ h2 {
     overflow: hidden;
     position: relative;
 }
-
 .caja:hover {
     transform: scale(1.05);
     transition: 1.2s;
     outline: 4px solid #00D400;
     text-decoration: none;
 }
-
 .caja h3 {
     transition: transform 0.3s ease-in-out;
 }
-
 .caja:hover h3 {
     transform: scale(1.1);
 }
-
 .caja::before {
     content: "";
     position: absolute;
@@ -275,32 +258,45 @@ h2 {
     background-color: #00D400;
     opacity: 0;
 }
-
 .caja:hover::before {
     animation: colorFade 0.6s forwards;
 }
-
 @keyframes colorFade {
     0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;}
 }
- 
+
+
+#cajas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 10px), 1fr));
+    justify-items: space-around;
+    grid-gap: 10px;
+    margin-bottom: 100px;
+}
+#cajas-primeras {
+    display: grid;
+    grid-template-columns: 69% 30%;
+    grid-gap: 10px;
+    margin-bottom: 10px;
+}
 .caja1 {
-    grid-column: 1;
+    grid-column: 1/2;
 }
-
 .caja1_5 {
-    grid-column: 2;
+    grid-column: 2/2;
 }
-
-
 .caja2 {
     grid-column: span 2;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(calc(100% - 10px), 1fr));
-    justify-items: space-between;
 }
+.caja3 {
+    grid-column: 1/2;
+}
+.caja4 {
+    grid-column: 2/2;
+} 
+
 
 .imagenes {
     margin-bottom: 20px;
@@ -340,13 +336,7 @@ h2 {
     object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
 }
 
-.caja3 {
-    
-}
 
-.caja4 {
-    
- } 
 
 
 @media screen and (max-width: 600px) {
@@ -539,7 +529,7 @@ span:active {
     justify-items: center;
     align-items: center;
     width: 30%;
-    float: right;
+    float: left;
     height: 100%;
 }
 
@@ -809,7 +799,7 @@ hr {
     bottom: 0;
 }
 #cajas-contacto .caja2-contacto {
-     height: 550px;
+    height: 550px;
     display: grid;
     grid-auto-flow: row;
     background: #121212;
@@ -817,14 +807,16 @@ hr {
 }
 #cajas-contacto .caja2-contacto hr {
     width: 100%;
-    padding: 1px;
+    padding: 1px 0px;
     color: white;
+    margin: 0px;
 }
 #cajas-contacto .caja2-contacto h3 {
     color: white;
     text-align: center;
     font-weight: 200;
     font-size: 14px;
+    padding: 20px;
 }
 
 

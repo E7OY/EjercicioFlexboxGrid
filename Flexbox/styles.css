@@ -513,9 +513,8 @@ span:active {
     justify-content: center;
     align-items: center;
     width: 30%;
-    float: right;
+    float: left;
     position: relative;
-    left: 70px;
 }
 
 .caja-articulo .texto {
@@ -788,14 +787,16 @@ hr {
 }
 #cajas-contacto .caja2-contacto hr {
     width: 100%;
-    padding: 1px;
+    padding: 2px 0px;
     color: white;
+    margin: 0px;
 }
 #cajas-contacto .caja2-contacto h3 {
     color: white;
     text-align: center;
     font-weight: 200;
     font-size: 14px;
+    padding: 20px;
 }
 
 
