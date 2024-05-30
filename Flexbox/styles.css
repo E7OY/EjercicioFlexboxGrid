@@ -639,6 +639,7 @@ span:active {
     border-radius: 25px;
     width: 100%;
     padding: 30px;
+    cursor: pointer;
 }
 .caja-color1 h3 {
     color: #00D400;
@@ -648,6 +649,7 @@ span:active {
     border-radius: 25px;
     width: 100%;
     padding: 30px;
+    cursor: pointer;
 }
 .caja-color2 h3 {
     color: #8C8C8C;
