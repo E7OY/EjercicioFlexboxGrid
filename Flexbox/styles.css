@@ -65,15 +65,6 @@ header nav ul li a {
 		text-decoration: none;
 	}
 
-    body.dark .menu_bar header nav a {
-        color: white;
-    } 
-
-    header a {
-        padding: 40px;
-        position: relative;
-        bottom: 0;
-    }
 
 	.menu_bar span {
         float: right;
@@ -83,9 +74,11 @@ header nav ul li a {
 	header nav {
         background: #121212;
 		width: 80%;
- 		position: fixed;
-  		margin: 450px auto 0px auto;
-        height: 100%;
+ 		position: absolute;
+        height: 42%;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 25px;
  	}
 
     button {
@@ -97,21 +90,20 @@ header nav ul li a {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        padding: 0px 5px;
     
     }
-
-
     
 	header nav ul li {
 		display: block;
 		border-bottom:1px solid rgba(255,255,255,.5);
         width: 100%;
-        padding: 0px 10px;
  	}
 
 	header nav ul li a {
-		display: block;   
-        
+		display: block;
+        padding: 15px 15px;
+
     }
 }
 
@@ -205,8 +197,6 @@ header nav a {
 
 
 
-main {
-}
 
 h1 {
     margin-top: 100px;
@@ -333,14 +323,6 @@ h2 {
 
 .caja4 {
     flex: 0 0 calc(50% - 10px); /* La caja2 tomará el 40% del espacio disponible, menos 20px para tener en cuenta el margen */
-}
-
-
-
-@media screen and (max-width: 600px) {
-    .caja, .caja1, .caja2, .caja3, .caja4 {
-        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
-    }
 }
 
 .caja h2 {
@@ -992,17 +974,36 @@ body.dark .formulario input, body.dark .formulario textarea {
     h2 {
         font-size: 20px;
     }
+
+    .caja {
+        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
+    }
+
+    .imagenes {
+        display: flex;
+        justify-content: center;
+        width: 3;
+    }
+    .imagenes img {
+        width: 40%; 
+    }
+
+
+
      .textos-legales .oculto {
         display: none;
         margin-bottom: 0px;
     }
     .textos-legales ul li{
         margin-bottom: 10px;
+        padding: 0px;
     }
 
     .enlaces ul li {
         padding: 5px 0px;
     }
+
+
 
 
     /*------------------------------------CONTACTO------------------------------------*/
@@ -1013,15 +1014,28 @@ body.dark .formulario input, body.dark .formulario textarea {
         width: 100%;
     }
     
-    
+
+    /*------------------------------------PRODUCTOS------------------------------------*/
+
     .caja-articulo {
         height: auto;
         display: flex;
         flex-direction: column;
+        gap: 1px;
+        margin-top: -20px;
     }
    
     .caja-articulo .imagen {
         display: none;
+    }
+    .caja-articulo .texto h2 {
+        font-size: 20px;
+    }
+    .caja-articulo .texto h3 {
+        font-size: 18px;
+    }
+    .caja-articulo .texto p {
+        font-size: 16px;
     }
 
     .caja-articulo .texto {
@@ -1029,11 +1043,8 @@ body.dark .formulario input, body.dark .formulario textarea {
     }
 
     .caja-articulo .texto p {
-        margin-top: -50px;
+        margin-top: -80px;
     }
-
-    
-
 }
 
 

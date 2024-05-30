@@ -13,13 +13,14 @@ function main () {
 	$('.menu_bar').click(function(){
 		if (contador == 1) {
 			$('nav').animate({
+				top: '0',
 				left: '0'
 			});
 			contador = 0;
 		} else {
 			contador = 1;
 			$('nav').animate({
-				left: '-100%'
+				top: '-100%'
 			});
 		}
 	});
