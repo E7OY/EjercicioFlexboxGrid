@@ -756,7 +756,11 @@ input, textarea {
    justify-items: center;
    align-items: center;
 }
-
+input[type="submit"] {
+    background: linear-gradient(to left, #000000, #00e9003d);
+    color: #d1d1d1;
+    cursor: pointer;
+}
 hr {
   text-align: center;
   height: 2px;
