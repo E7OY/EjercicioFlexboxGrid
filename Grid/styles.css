@@ -40,6 +40,7 @@ header nav ul li a {
 }
 
 
+
 @media screen and (max-width: 800px) {
 	.menu_bar {
 		display:block;
@@ -65,15 +66,6 @@ header nav ul li a {
 		text-decoration: none;
 	}
 
-    body.dark .menu_bar header nav a {
-        color: white;
-    } 
-
-    header a {
-        padding: 40px;
-        position: relative;
-        bottom: 0;
-    }
 
 	.menu_bar span {
         float: right;
@@ -83,38 +75,37 @@ header nav ul li a {
 	header nav {
         background: #121212;
 		width: 80%;
- 		position: fixed;
-  		margin: 450px auto 0px auto;
-        height: 100%;
+ 		position: absolute;
+        height: 42%;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 25px;
  	}
 
     button {
         width: 20%;     
         margin-top: 20px;   
-    } 
+     }
 
      header nav ul {
         display: grid;
         grid-auto-flow: row;
-        justify-items: center;
+        width: 100%;
+        padding: 0px;
     }
-
     
 	header nav ul li {
 		display: block;
 		border-bottom:1px solid rgba(255,255,255,.5);
         width: 100%;
-        padding: 0px 10px;
  	}
 
 	header nav ul li a {
-		display: block;   
-        
+		display: block;
+        padding: 15px 15px;
+
     }
 }
-
-
-
 
 nav.open {
     display: block;
@@ -204,8 +195,6 @@ header nav a {
 
 
 
-main {
-}
 
 h1 {
     margin-top: 100px;
@@ -1018,45 +1007,122 @@ body.dark .formulario input, body.dark .formulario textarea {
     }
      .textos-legales .oculto {
         display: none;
-        margin-bottom: 0px;
     }
     .textos-legales ul li{
-        margin-bottom: 10px;
+        margin: 0px;
+        padding: 5px 0px;
     }
-
     .enlaces ul li {
         padding: 5px 0px;
     }
 
 
     /*------------------------------------CONTACTO------------------------------------*/
+
+
+
     #cajas-contacto {
-        flex-direction: column;
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: none;
     }
-    #cajas-contacto .caja1-contacto, #cajas-contacto .caja2-contacto {
-        width: 100%;
-    }
-    
-    
-    .caja-articulo {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-    }
-   
-    .caja-articulo .imagen {
-        display: none;
+    #cajas-contacto .caja2-contacto hr {
+        padding: 0px;
     }
 
-    .caja-articulo .texto {
-        width: 100%;
+
+
+    /*------------------------------------REGISTRO------------------------------------*/
+
+    label {
+        font-size: 16px;
+        padding-right: 0px;
+    }
+    input, textarea {
+        font-size: 16px;
+        padding: 15px;
+        box-shadow: 5px 5px 0px #242424;
+        width: 200px;
     }
 
-    .caja-articulo .texto p {
-        margin-top: -50px;
-    }
 
-    
+
+/*------------------------------------PRODUCTO1------------------------------------*/
+
+.imagen-texto {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+}
+.imagen-descripcion {
+    width: 100%;
+}
+.imagen-descripcion img {
+    width: 70%;
+}
+
+
+.texto-descripcion {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-items: center;
+
+
+}
+.texto-descripcion h2 {
+    margin-left: 30px;
+    font-size: 26px;
+    font-weight: 600;
+}
+.texto-descripcion li {
+    line-height: 20px;
+    font-weight: 400;
+}
+
+
+
+
+.cajas-descripcion {
+    grid-template-columns: none;
+    grid-auto-flow: row;
+}
+
+.caja-envio {
+    width: 50%;
+    margin-bottom: 10px;
+}
+.caja-envio h3 {
+    font-size: 14px;
+}
+
+
+.cajas-colores {
+    justify-items: center;
+    margin-top: 20px;
+    width: 62%;
+}
+
+
+
+.cajas-marcas {
+    grid-auto-flow: row;
+    gap: 10px;    
+}
+.cajas-marcas h3 {
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+#marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
+    height: 250px;
+}
+
+
+
+
+
+
+
 
 }
 
