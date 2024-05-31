@@ -1061,14 +1061,11 @@ body.dark .formulario input, body.dark .formulario textarea {
     width: 70%;
 }
 
-
 .texto-descripcion {
     width: 100%;
     margin: 0 auto;
     margin-top: 50px;
     justify-items: center;
-
-
 }
 .texto-descripcion h2 {
     margin-left: 30px;
@@ -1079,9 +1076,6 @@ body.dark .formulario input, body.dark .formulario textarea {
     line-height: 20px;
     font-weight: 400;
 }
-
-
-
 
 .cajas-descripcion {
     grid-template-columns: none;
@@ -1096,14 +1090,11 @@ body.dark .formulario input, body.dark .formulario textarea {
     font-size: 14px;
 }
 
-
 .cajas-colores {
     justify-items: center;
     margin-top: 20px;
     width: 62%;
 }
-
-
 
 .cajas-marcas {
     grid-auto-flow: row;
@@ -1116,6 +1107,40 @@ body.dark .formulario input, body.dark .formulario textarea {
 #marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
     height: 250px;
 }
+
+
+/*------------------------------------PRODUCTOS------------------------------------*/
+
+#cajas-productos {
+    margin: 90px 0px;
+    gap: 5px;
+}
+
+.caja-articulo {
+    height: auto;
+    display: grid;
+  }
+.caja-articulo .imagen {
+    display: none;
+}
+.caja-articulo .texto {
+    width: 90%;
+    height: auto;
+}
+.caja-articulo .texto h2 {
+    margin: 0;
+}
+.caja-articulo .texto h3 {
+    font-size: 18px;
+}
+.caja-articulo .texto p {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+
+
+
 
 
 
