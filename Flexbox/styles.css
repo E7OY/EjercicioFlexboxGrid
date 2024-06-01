@@ -498,6 +498,13 @@ span:active {
     float: left;
     position: relative;
 }
+.caja-articulo .imagen img {
+    filter: drop-shadow(5px 5px 10px #000);  
+
+}
+.caja-articulo .imagen img:hover  {
+    filter: drop-shadow(5px 5px 10px #00d40074);  
+}
 
 .caja-articulo .texto {
     width: 60%;
@@ -660,6 +667,9 @@ span:active {
     text-align: center;
     font-size: 17px;
     margin-top: 20px;
+    background: linear-gradient(to right, #121212 0%,#00D400 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .cajas-marcas img {
@@ -1066,7 +1076,9 @@ body.dark .formulario input, body.dark .formulario textarea {
     width: 100%;
 }
 .imagen-descripcion img {
-    width: 70%;
+    width: 60%;
+    display: flex;
+    margin: 0 auto;
 }
 .texto-descripcion {
     width: 100%;

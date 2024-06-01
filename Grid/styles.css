@@ -360,7 +360,7 @@ h2 {
     padding: 20px 40px;
 }
 .caja1_5 h2 {
-    background: linear-gradient( #FFFFFF 0%,#440844 100%) !important;
+    background: linear-gradient(to right, #004ed4 0%,#440840 50%) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;  
     font-size: 28px;
@@ -521,6 +521,16 @@ span:active {
     float: left;
     height: 100%;
 }
+.caja-articulo .imagen img {
+    filter: drop-shadow(5px 5px 10px #000);  
+
+}
+.caja-articulo .imagen img:hover  {
+    filter: drop-shadow(5px 5px 10px #00d40074);  
+}
+
+
+
 
 .caja-articulo .texto {
     width: 60%;
@@ -637,8 +647,9 @@ span:active {
     grid-auto-flow: row;
     margin-top: 100px;
     width: 100%;
-    height: 100%;
- }
+    height: 85%;
+    
+}
 .caja-color1 {
     border: 2px solid #00D400;
     border-radius: 25px;
@@ -665,15 +676,15 @@ span:active {
 
 
 #marcas {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
     margin-top: 50px;
     margin-bottom: 100px;
 }
 .cajas-marcas {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-direction: row;
     gap: 20px;    
     width: 100%;
 }
@@ -686,6 +697,9 @@ span:active {
     text-align: center;
     font-size: 17px;
     margin-top: 20px;
+    background: linear-gradient(to right, #121212 0%,#00D400 100%);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .cajas-marcas img {
@@ -693,15 +707,14 @@ span:active {
 }
 
 #marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
-    display: grid;
-    grid-auto-flow: row;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
     height: 300px;
     background: #121212;
     border-radius: 35px;
-    justify-items: center;
-    align-items: center;
- }
+}
+
 
 
 
