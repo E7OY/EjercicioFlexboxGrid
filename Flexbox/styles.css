@@ -92,87 +92,17 @@ nav.open {
 	display:none;
 }
 
-header .activo{
+header .activo, footer .activo{
     background:#00D400;
     border-radius: 5px;
 }
 footer .activo {
-    background:#00D400;
-    border-radius: 5px;
     padding: 15px 0px;
     display: inline-block;
 }
 
 
-
-@media screen and (max-width: 800px) {
-	.menu_bar {
-		display:block;
-		width:100%;
-		background:#121212;
-	}
-    body.dark .menu_bar {
-		background:#eee;
-	}
-    body.dark header nav {
-        background: white;
-    }
-    body.dark header nav ul li {
-        border-bottom: 1px solid #121212;
-    }   
-
-	.menu_bar .bt-menu {
-		display: block;
-		padding: 20px;
-		color: #fff;
-        font-size: 25px;
-		font-weight: bold;
-		text-decoration: none;
-	}
-
-
-	.menu_bar span {
-        float: right;
-		font-size: 40px;
-	}
-
-	header nav {
-        background: #121212;
-        border: 2px solid #000;
-		width: 80%;
-        position: absolute;
-        height: 50%;
-        top: 0;
-        left: 0;
-        border-bottom-right-radius: 25px;
-    }
-
-    button {
-        width: 20%;     
-        margin-top: 20px;   
-    }
-
-     header nav ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0px 5px;
-    
-    }
-    
-	header nav ul li {
-		display: block;
-		border-bottom:1px solid rgba(255,255,255,.5);
-        width: 100%;
-    }
-
-	header nav ul li a {
-    }
-}
-
-
-
-
+/*------------------------------------MAIN------------------------------------*/
 h1 {
     margin-top: 100px;
     font-size: 50px;
@@ -787,51 +717,51 @@ hr {
 
 
 /*--------------------------------------DARKMODE   LIGHTMODE--------------------------------------*/
-
 body.dark {
+    --blanco: rgb(255, 255, 255);
+    --gris-claro: #eee;
+    --gris-oscuro: #121212;
+    --gris-medio: #424242;
+    --verde: #00D400;
+    --azul: #3C619A;
+    --gris: #7E7E7E;
     transition: 2s ease all;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--blanco);
 }
-
 body.dark header {
-    background: #eee;
+    background: var(--gris-claro);
 }
-
 body.dark header nav a {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
-
 body.dark main h1 {
-    background: linear-gradient(#121212, #ccc);
+    background: linear-gradient(var(--gris-oscuro), var(--gris-claro));
     -webkit-background-clip: text;
     color: transparent;
 }
-
 body.dark .caja {
-    background: #eee;
+    background: var(--gris-claro);
 }
 body.dark .caja1 h2 {
-        background: linear-gradient(to right, #121212 0%,#44D62C 100%) !important;
-        -webkit-background-clip: text !important;
-        color: transparent !important;  
+    background: linear-gradient(to right, var(--gris-oscuro) 0%, var(--verde) 100%) !important;
+    -webkit-background-clip: text !important;
+    color: transparent !important;  
 }
 body.dark .caja2 h2 {
-    background: linear-gradient( #121212 0%,#7E7E7E 100%) !important;
+    background: linear-gradient(var(--gris-oscuro) 0%, var(--gris) 100%) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
 }
 body.dark .caja4 h2 {
-    background: linear-gradient(to right, #3C619A 0%,#121212 100%) !important;
+    background: linear-gradient(to right, var(--azul) 0%, var(--gris-oscuro) 100%) !important;
     -webkit-background-clip: text !important;
     color: transparent !important;
 }
-body.dark .caja1 h3,body.dark .caja3 h3,body.dark .caja4 h3 {
-    color: #424242;
+body.dark .caja1 h3, body.dark .caja3 h3, body.dark .caja4 h3 {
+    color: var(--gris-medio);
 }
 body.dark footer {
-    background: #eee;
-}
-body.dark footer {
+    background: var(--gris-claro);
     background-image: url(../img/fondoLightModeFooter.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -839,115 +769,143 @@ body.dark footer {
     padding: 20px 40px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-
 }
 body.dark footer h2 {
-    -webkit-text-stroke: 1px #00D400;
-    color: #121212;
+    -webkit-text-stroke: 1px var(--verde);
+    color: var(--gris-oscuro);
 }
 body.dark footer h3 {
-    color: #0d0d0d;
+    color: var(--gris-oscuro);
 }
 body.dark footer a, body.dark footer li, body.dark small {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
 body.dark .enlaces h3 {
-    color: black;
+    color: var(--gris-oscuro);
 }
-
-
 body.dark #cajas-contacto .caja1-contacto, body.dark #cajas-contacto .caja2-contacto {
-    background: #eee;
+    background: var(--gris-claro);
 }
-
 body.dark #cajas-contacto .caja1-contacto h2, body.dark #cajas-contacto .caja2-contacto h2{
-    color: #121212;
+    color: var(--gris-oscuro);
 }
-
 body.dark #cajas-contacto .caja2-contacto hr{
-    color: #121212;
+    color: var(--gris-oscuro);
 }
 body.dark #cajas-contacto .caja2-contacto h3 {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
- 
-
-
-
 body.dark .caja-articulo {
-    background: #eee;
+    background: var(--gris-claro);
 }
 body.dark .caja-articulo p{
-    color: #121212;
+    color: var(--gris-oscuro);
 }
-
-
-
-
-
 body.dark .caja1, body.dark .caja2 {
-    background: #eee;
+    background: var(--gris-claro);
 }
-
 body.dark .caja1 h2, body.dark .caja2 h2{
-color: #121212;
+    color: var(--gris-oscuro);
 }
 body.dark #cajas-contacto hr{
-    color: #121212;
+    color: var(--gris-oscuro);
 }
 body.dark .caja2 h3, body.dark .caja2 a {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
-
-
-
-
-
 body.dark #descripcion {
-    background: rgb(238, 238, 238);
-    background-image: linear-gradient(rgb(238, 238, 238), rgb(238, 238, 238)), url(../img/Rectangle\ 5.png);
+    background: var(--gris-claro);
+    background-image: linear-gradient(var(--gris-claro), var(--gris-claro)), url(../img/Rectangle\ 5.png);
 }
 body.dark .texto-descripcion li {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
 body.dark .caja-envio h3 {
-    color: #121212;
+    color: var(--gris-oscuro);
 }
-body.dark #marcas .cajas-marcas .caja1m,body.dark #marcas .cajas-marcas .caja2m,body.dark #marcas .cajas-marcas .caja3m {
-    background: #eee;
+body.dark #marcas .cajas-marcas .caja1m, body.dark #marcas .cajas-marcas .caja2m, body.dark #marcas .cajas-marcas .caja3m {
+    background: var(--gris-claro);
 }
 body.dark #marcas .cajas-marcas h3 {
-    color: #7E7E7E;
+    color: var(--gris);
 }
-
-
-
-
 body.dark .formulario {
-    background: #eee;
+    background: var(--gris-claro);
 }
 body.dark .formulario input, body.dark .formulario textarea {
     margin: 10px 0px;
-    color: #00D400;
+    color: var(--verde);
     font-size: 20px;
     font-family: Inter-SemiBold;
-    background: #eee;
-    border: 2px solid #fff;
+    background: var(--gris-claro);
+    border: 2px solid var(--blanco);
     outline: none;
     padding: 20px;
     border-radius: 20px;
-    box-shadow: 10px 10px 0px #fff;
+    box-shadow: 10px 10px 0px var(--blanco);
     margin-bottom: 20px;
     width: 250px;
     position: relative;
     right: 0;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 /*--------------------------------------RESPONSIVE--------------------------------------*/
+
+
+@media screen and (max-width: 800px) {
+	.menu_bar {
+        display:block;
+		background:#121212;
+        z-index: 1001;
+        position: relative;
+        left: 50px;
+	}
+    body.dark .menu_bar {
+		background:#eee;
+	}
+    body.dark header nav {
+        background: white;
+    }
+    body.dark header nav ul li {
+        border-bottom: 1px solid #121212;
+    }   
+
+	header nav {
+        background: #121212;
+        border: 2px solid #000;
+		width: 70%;
+        position: absolute;
+        height: 50%;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 25px;
+    }
+
+    button {
+        width: 20%;     
+        margin-top: 20px;   
+    }
+
+     header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0px 0px;
+    
+    }
+    
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+        width: 100%;
+    }
+
+	header nav ul li a {
+    }
+}
 
 @media only screen and (max-width: 950px){
     body {
@@ -1139,41 +1097,11 @@ body.dark .formulario input, body.dark .formulario textarea {
 /*--------------------------------------FONTS--------------------------------------*/ 
 
 @font-face {
-    font-family: 'Inter-Thin';
-    src: url(../fonts/Inter-Thin.ttf);
-}
-
-@font-face {
     font-family: 'Inter-SemiBold';
     src: url(../fonts/Inter-SemiBold.ttf);
 }
 
 @font-face {
-    font-family: 'Inter-Regular';
-    src: url(../fonts/Inter-Regular.ttf);
-}
-
-@font-face {
     font-family: 'Inter-Medium';
     src: url(../fonts/Inter-Medium.ttf);
-}
-
-@font-face {
-    font-family: 'Inter-Light';
-    src: url(../fonts/Inter-Light.ttf);
-}
-
-@font-face {
-    font-family: 'Inter-ExtraLight';
-    src: url(../fonts/Inter-ExtraLight.ttf);
-}
-
-@font-face {
-    font-family: 'Inter-ExtraBold';
-    src: url(../fonts/Inter-ExtraBold.ttf);
-}
-
-@font-face {
-    font-family: 'Inter-Bold';
-    src: url(../fonts/Inter-Bold.ttf);
 }
