@@ -197,7 +197,7 @@ h2 {
 }
 
 .caja {
-    flex: 0 0 calc(50% - 10px); /* Cada caja tomará el 50% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(50% - 10px); 
     margin-bottom: 10px;
     background: #121212;
     border-radius: 35px;
@@ -250,7 +250,7 @@ h2 {
 
 
 .caja1 {
-    flex: 0 0 calc(70% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(70% - 10px); 
 }
 .caja1_5 {
         flex: 0 0 calc(30% - 10px);
@@ -289,16 +289,16 @@ h2 {
 }
 
 .caja2 img {
-    width: calc(35% - 10px); /* Define un ancho para las imágenes */
-    object-fit: cover; /* Asegura que las imágenes mantengan su aspecto al cambiar de tamaño */
+    width: calc(35% - 10px);
+    object-fit: cover; 
 }
 
 .caja3 {
-    flex: 0 0 calc(50% - 10px); /* La caja1 tomará el 60% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(50% - 10px);
 }
 
 .caja4 {
-    flex: 0 0 calc(50% - 10px); /* La caja2 tomará el 40% del espacio disponible, menos 20px para tener en cuenta el margen */
+    flex: 0 0 calc(50% - 10px);
 }
 
 .caja h2 {
@@ -670,6 +670,16 @@ span:active {
     border-radius: 35px;
     margin: 100px 0px;
     padding: 100px 0px; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#izq, #drch {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 label {
@@ -695,11 +705,11 @@ input, textarea {
     width: 250px;
     position: relative;
     right: 0;
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 input[type="submit"] {
     background: linear-gradient(to left, #000000, #00e9003d);
     color: #d1d1d1;
@@ -713,19 +723,6 @@ hr {
   border: 0;
   margin: 20px 0px;
 }
-
-.formulario {
-    display: flex; /* Aplica Flexbox al formulario */
-    justify-content: center;
-}
-
-#izq, #drch {
-    width: 45%; /* Ajusta el ancho para que los divs quepan en una línea */
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-}
-
 
 
 /*------------------------------------CONTACTO------------------------------------*/
@@ -974,7 +971,7 @@ body.dark .formulario input, body.dark .formulario textarea {
     }
 
     .caja {
-        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
+        flex: 0 0 100%; 
     }
     .imagenes {
         display: flex;
