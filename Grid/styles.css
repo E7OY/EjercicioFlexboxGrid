@@ -74,9 +74,10 @@ header nav ul li a {
 
 	header nav {
         background: #121212;
+        border: 2px solid #000;
 		width: 80%;
- 		position: absolute;
-        height: 42%;
+        position: absolute;
+        height: 50%;
         top: 0;
         left: 0;
         border-bottom-right-radius: 25px;
@@ -95,16 +96,12 @@ header nav ul li a {
     }
     
 	header nav ul li {
-		display: block;
+		display: inline-block;
 		border-bottom:1px solid rgba(255,255,255,.5);
         width: 100%;
  	}
 
-	header nav ul li a {
-		display: block;
-        padding: 15px 15px;
 
-    }
 }
 
 nav.open {
@@ -230,6 +227,7 @@ h2 {
     transition: 1.2s;
     outline: 4px solid #00D400;
     text-decoration: none;
+    z-index: 90;
 }
 .caja h3 {
     transition: transform 0.3s ease-in-out;
@@ -722,6 +720,20 @@ span:active {
     padding: 100px 0px; 
 }
 
+.formulario {
+    display: flex; /* Aplica Flexbox al formulario */
+    justify-content: center;
+}
+
+#izq, #drch {
+    width: 45%; /* Ajusta el ancho para que los divs quepan en una línea */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
 label {
     color: #777777;
     font-family: Inter-SemiBold;
@@ -987,7 +999,7 @@ body.dark .formulario input, body.dark .formulario textarea {
 
 }
 
-@media only screen and (max-width: 946px){
+@media only screen and (max-width: 950px){
     body {
         overflow-x: hidden;
     }
@@ -1000,9 +1012,11 @@ body.dark .formulario input, body.dark .formulario textarea {
         padding: 10px 0px;
         justify-content: space-between;
     }
-    button {
-        top: 10px;
+    header nav ul li{
+        display: inline-block;
     }
+
+
     h1 {
         font-size: 34px;
     }
@@ -1054,16 +1068,6 @@ body.dark .formulario input, body.dark .formulario textarea {
         .imagenes4 img {
             width: 70%;
         }
-        
-     
-
-
-
-
-
-
-
-
      .textos-legales .oculto {
         display: none;
     }
@@ -1098,6 +1102,8 @@ body.dark .formulario input, body.dark .formulario textarea {
     /*------------------------------------REGISTRO------------------------------------*/
 
     label {
+        display: grid;
+        justify-content: start;
         font-size: 16px;
         padding-right: 0px;
     }
@@ -1107,7 +1113,21 @@ body.dark .formulario input, body.dark .formulario textarea {
         box-shadow: 5px 5px 0px #242424;
         width: 200px;
     }
+    .formulario hr {
+        display: none;
+    }
 
+    .formulario {
+        display: grid; /* Aplica Flexbox al formulario */
+        justify-content: center;
+    }
+    
+    #izq, #drch {
+        width: 100%; /* Ajusta el ancho para que los divs quepan en una línea */
+        display: grid;
+        grid-auto-flow: row;
+    }
+    
 
 
 /*------------------------------------PRODUCTO1------------------------------------*/
@@ -1124,10 +1144,7 @@ body.dark .formulario input, body.dark .formulario textarea {
     width: 60%;
     display: grid;
     margin: auto;
-
-
 }
-
 .texto-descripcion {
     width: 100%;
     margin: 0 auto;
@@ -1210,18 +1227,6 @@ body.dark .formulario input, body.dark .formulario textarea {
     font-size: 16px;
     margin-top: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

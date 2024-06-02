@@ -1,120 +1,3 @@
-.menu_bar {
-	display:none;
-}
-
-header nav {
-	z-index:1000;
-	max-width: 1000px;
-}
-
-header nav ul {
-	list-style:none;
-}
-
-header nav ul li {
-	display:inline-block;
-	position: relative;
-}
-
-header nav ul li:hover {
-	background:#00D400;
-    border-radius: 5px;
-}
-header .activo{
-    background:#00D400;
-    border-radius: 5px;
-
-}
-footer .activo {
-    background:#00D400;
-    border-radius: 5px;
-    padding: 15px 0px;
-    display: inline-block;
-
- }
-header nav ul li a {
-	color:#fff;
-	display:block;
-	text-decoration:none;
-	padding: 20px;
-}
-
-
-@media screen and (max-width: 800px) {
-	.menu_bar {
-		display:block;
-		width:100%;
-		background:#121212;
-	}
-    body.dark .menu_bar {
-		background:#eee;
-	}
-    body.dark header nav {
-        background: white;
-    }
-    body.dark header nav ul li {
-        border-bottom: 1px solid #121212;
-    }   
-
-	.menu_bar .bt-menu {
-		display: block;
-		padding: 20px;
-		color: #fff;
- 		font-size: 25px;
-		font-weight: bold;
-		text-decoration: none;
-	}
-
-
-	.menu_bar span {
-        float: right;
-		font-size: 40px;
-	}
-
-	header nav {
-        background: #121212;
-		width: 80%;
- 		position: absolute;
-        height: 42%;
-        top: 0;
-        left: 0;
-        border-bottom-right-radius: 25px;
- 	}
-
-    button {
-        width: 20%;     
-        margin-top: 20px;   
-     }
-
-     header nav ul {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 0px 5px;
-    
-    }
-    
-	header nav ul li {
-		display: block;
-		border-bottom:1px solid rgba(255,255,255,.5);
-        width: 100%;
- 	}
-
-	header nav ul li a {
-		display: block;
-        padding: 15px 15px;
-
-    }
-}
-
-
-
-
-nav.open {
-    display: block;
-}
-
-
 body {
     background-color: black;
     max-width: 1100px;
@@ -122,6 +5,7 @@ body {
     font-family: Inter-Medium;
 }
 
+/*------------------------------------BOTON LIGHT/DARK MODE------------------------------------*/
 button {
     transition: 2s ease all;
     position: absolute;
@@ -129,7 +13,6 @@ button {
     top: 10px;
     left: 10px;
 }
-
 .switch {
     background: orange;
     border-radius: 1000px;
@@ -170,6 +53,8 @@ button {
     color: white;
 }
 
+
+
 header {
     height: 280px;
     background: #121212;
@@ -178,22 +63,112 @@ header {
     display: flex;
     justify-content: center;
     flex-direction: row;
-    align-content: center;
     align-items: center;
 }
-
-
+header nav {
+	max-width: 1000px;
+}
 header nav ul li{
     display: inline-block;
     padding: 0px 25px;
 }
-
+header nav ul li:hover {
+	background:#00D400;
+    border-radius: 5px;
+}
 header nav a {
     color: white;
     text-decoration: none;
-    font-weight: 200;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
 }
 
+
+nav.open {
+    display: block;
+}
+.menu_bar {
+	display:none;
+}
+
+header .activo{
+    background:#00D400;
+    border-radius: 5px;
+}
+footer .activo {
+    background:#00D400;
+    border-radius: 5px;
+    padding: 15px 0px;
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 800px) {
+	.menu_bar {
+		display:block;
+		width:100%;
+		background:#121212;
+	}
+    body.dark .menu_bar {
+		background:#eee;
+	}
+    body.dark header nav {
+        background: white;
+    }
+    body.dark header nav ul li {
+        border-bottom: 1px solid #121212;
+    }   
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+        font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+
+	.menu_bar span {
+        float: right;
+		font-size: 40px;
+	}
+
+	header nav {
+        background: #121212;
+        border: 2px solid #000;
+		width: 80%;
+        position: absolute;
+        height: 50%;
+        top: 0;
+        left: 0;
+        border-bottom-right-radius: 25px;
+    }
+
+    button {
+        width: 20%;     
+        margin-top: 20px;   
+    }
+
+     header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0px 5px;
+    
+    }
+    
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+        width: 100%;
+    }
+
+	header nav ul li a {
+    }
+}
 
 
 
@@ -241,6 +216,7 @@ h2 {
     transition: 1.2s;
     outline: 4px solid #00D400;
     text-decoration: none;
+    z-index: 90;
 }
 
 .caja h3 {
@@ -692,9 +668,6 @@ span:active {
     width: 100%;
     background: #121212;
     border-radius: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 100px 0px;
     padding: 100px 0px; 
 }
@@ -741,6 +714,17 @@ hr {
   margin: 20px 0px;
 }
 
+.formulario {
+    display: flex; /* Aplica Flexbox al formulario */
+    justify-content: center;
+}
+
+#izq, #drch {
+    width: 45%; /* Ajusta el ancho para que los divs quepan en una línea */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 
 
 
@@ -966,7 +950,7 @@ body.dark .formulario input, body.dark .formulario textarea {
 
 }
 
-@media only screen and (max-width: 946px){
+@media only screen and (max-width: 950px){
     body {
         overflow-x: hidden;
     }
@@ -975,13 +959,9 @@ body.dark .formulario input, body.dark .formulario textarea {
         justify-content: center;
     }
     header nav ul li{
-        display: block;
+        display: inline-block;
         padding: 10px 0px;
         justify-content: space-between;
-    }
-
-    button {
-        top: 10px;
     }
 
     h1 {
@@ -1126,12 +1106,33 @@ body.dark .formulario input, body.dark .formulario textarea {
     label {
         font-size: 16px;
         padding-right: 0px;
+        text-align: left;
+        margin: 0;
+        position: relative;
+        width: 100%;
+        left: 97px;
+        
     }
+    
     input, textarea {
         font-size: 16px;
         padding: 15px;
         box-shadow: 5px 5px 0px #242424;
         width: 200px;
+    }
+    
+    .formulario hr {
+        display: none;   
+
+    }
+    
+    .formulario {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #izq, #drch {
+        width: 100%;
     }
 }
 
