@@ -1071,7 +1071,11 @@ body.dark .formulario input, body.dark .formulario textarea {
     width: 100%;
 }
 .imagen-descripcion img {
-    width: 70%;
+    width: 60%;
+    display: grid;
+    margin: auto;
+
+
 }
 
 .texto-descripcion {
@@ -1105,21 +1109,27 @@ body.dark .formulario input, body.dark .formulario textarea {
 
 .cajas-colores {
     justify-items: center;
-    margin-top: 20px;
+    margin-top: 0px;
     width: 62%;
+}
+.caja-color1, .caja-color2 {
+    margin-bottom: 10px;
 }
 
 .cajas-marcas {
+    display: grid;
     grid-auto-flow: row;
     gap: 10px;    
 }
 .cajas-marcas h3 {
-    margin-bottom: 20px;
     font-size: 15px;
+    margin-bottom: 50px;
 }
 #marcas .cajas-marcas .caja1m,#marcas .cajas-marcas .caja2m, #marcas .cajas-marcas .caja3m {
     height: 250px;
+    width: 100%;
 }
+
 
 
 /*------------------------------------PRODUCTOS------------------------------------*/
