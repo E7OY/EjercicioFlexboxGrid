@@ -792,7 +792,9 @@ body.dark .formulario textarea {
 body.dark #marcas .cajas-marcas h3 {
     color: var(--color-texto-secundario);
 }
-
+body.dark .terminos {
+    color: rgb(133, 133, 133);
+}
 
 /*--------------------------------------RESPONSIVE--------------------------------------*/
 
