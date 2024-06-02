@@ -326,14 +326,6 @@ h2 {
 }
 
 
-
-
-@media screen and (max-width: 600px) {
-    .caja, .caja1, .caja2, .caja3, .caja4 {
-        flex: 0 0 100%; /* En pantallas pequeñas, cada caja tomará el 100% del espacio disponible */
-    }
-}
-
 .caja h2 {
     font-size: 32px;
     text-align: center;
@@ -1018,6 +1010,60 @@ body.dark .formulario input, body.dark .formulario textarea {
     h2 {
         font-size: 20px;
     }
+
+    
+
+
+        #cajas {
+            grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        }
+        #cajas-primeras {
+            grid-template-columns: 100%;
+        }
+        .caja1, .caja1_5, .caja2, .caja3, .caja4 {
+            grid-column: 1 / -1;
+        }
+        .caja2 img {
+            width: calc(100% - 10px);
+        }
+        .imagenes {
+            display: grid;
+            grid-auto-flow: column;
+            justify-items: center;
+            align-items: center;
+        }
+        .imagenes img {
+            width: 80%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .imagenes2 {
+            display: grid;
+            grid-auto-flow: column;
+        }
+        
+        .caja2 h2 {
+            right: 20px;
+        }
+
+        .imagenes4 {
+            position: relative;
+            bottom: 40px;
+        }
+        .imagenes4 img {
+            width: 70%;
+        }
+        
+     
+
+
+
+
+
+
+
+
      .textos-legales .oculto {
         display: none;
     }
@@ -1028,6 +1074,10 @@ body.dark .formulario input, body.dark .formulario textarea {
     .enlaces ul li {
         padding: 5px 0px;
     }
+    small {
+        width: 100%;
+    }
+
 
 
     /*------------------------------------CONTACTO------------------------------------*/
